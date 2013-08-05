@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @implementation AppDelegate
 
@@ -15,9 +16,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    // Override point for customization after application launch.
-//    self.window.backgroundColor = [UIColor whiteColor];
+    // Google Maps API Key
+    [GMSServices provideAPIKey:@"AIzaSyD3myOe2BRIHkxTWwQoxSWHOLrIXWWYhOM"];
     self.window.rootViewController = vcSplash;
     [self.window makeKeyAndVisible];
     return YES;
