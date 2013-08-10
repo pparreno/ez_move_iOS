@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SplashViewController.h"
+#import "PKRevealController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWindow *window;
-@property (strong, nonatomic) IBOutlet SplashViewController *vcSplash;
+@property (nonatomic, strong, readwrite) PKRevealController *revealController;
 
 @end

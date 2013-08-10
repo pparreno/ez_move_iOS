@@ -8,17 +8,44 @@
 
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "PKRevealController.h"
+#import "SavedTripsViewController.h"
+#import "MapViewController.h"
+#import "EntryNavViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize vcSplash;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Google Maps API Key
     [GMSServices provideAPIKey:@"AIzaSyD3myOe2BRIHkxTWwQoxSWHOLrIXWWYhOM"];
-    self.window.rootViewController = vcSplash;
+    //self.window.rootViewController = vcSplash;
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // Step 1: Create your controllers.
+    MapViewController *mapVC = [[MapViewController alloc] init];
+    EntryNavViewController *entryVC = [[EntryNavViewController alloc] initWithRootViewController:mapVC];
+    SavedTripsViewController *leftVC = [[SavedTripsViewController alloc] init];
+    
+    // Step 2: Configure an options dictionary for the PKRevealController if necessary - in most cases the default behaviour should suffice. See PKRevealController.h for more option keys.
+    /*
+     NSDictionary *options = @{
+     PKRevealControllerAllowsOverdrawKey : [NSNumber numberWithBool:YES],
+     PKRevealControllerDisablesFrontViewInteractionKey : [NSNumber numberWithBool:YES]
+     };
+     */
+    
+    // Step 3: Instantiate your PKRevealController.
+    self.revealController = [PKRevealController revealControllerWithFrontViewController:entryVC
+                                                                     leftViewController:leftVC
+                                                                                options:nil];
+    
+    // Step 4: Set it as your root view controller.
+    self.window.rootViewController = self.revealController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

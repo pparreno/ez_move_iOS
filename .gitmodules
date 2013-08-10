@@ -1,0 +1,3 @@
+[submodule "vendor/PKRevealController"]
+	path = vendor/PKRevealController
+	url = git@github.com:pkluz/PKRevealController.git
