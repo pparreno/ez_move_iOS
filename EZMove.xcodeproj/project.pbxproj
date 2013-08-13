@@ -44,6 +44,11 @@
 		942AE58B17AE95B100A65988 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942AE58917AE95B100A65988 /* MapViewController.xib */; };
 		942AE58F17AE95F100A65988 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AE58D17AE95F100A65988 /* SplashViewController.m */; };
 		942AE59017AE95F100A65988 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942AE58E17AE95F100A65988 /* SplashViewController.xib */; };
+		947A8D8E17BA73A50027AF51 /* PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8917BA73A50027AF51 /* PKRevealController.m */; };
+		947A8D8F17BA73A50027AF51 /* PKRevealControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8B17BA73A50027AF51 /* PKRevealControllerContainerView.m */; };
+		947A8D9017BA73A50027AF51 /* UIViewController+PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8D17BA73A50027AF51 /* UIViewController+PKRevealController.m */; };
+		947A8D9917BA7F900027AF51 /* HomeNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D9717BA7F900027AF51 /* HomeNavViewController.m */; };
+		947A8D9A17BA7F900027AF51 /* HomeNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +108,15 @@
 		942AE58C17AE95F100A65988 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		942AE58D17AE95F100A65988 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		942AE58E17AE95F100A65988 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		947A8D8817BA73A50027AF51 /* PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRevealController.h; sourceTree = "<group>"; };
+		947A8D8917BA73A50027AF51 /* PKRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRevealController.m; sourceTree = "<group>"; };
+		947A8D8A17BA73A50027AF51 /* PKRevealControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRevealControllerContainerView.h; sourceTree = "<group>"; };
+		947A8D8B17BA73A50027AF51 /* PKRevealControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRevealControllerContainerView.m; sourceTree = "<group>"; };
+		947A8D8C17BA73A50027AF51 /* UIViewController+PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PKRevealController.h"; sourceTree = "<group>"; };
+		947A8D8D17BA73A50027AF51 /* UIViewController+PKRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PKRevealController.m"; sourceTree = "<group>"; };
+		947A8D9617BA7F900027AF51 /* HomeNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavViewController.h; sourceTree = "<group>"; };
+		947A8D9717BA7F900027AF51 /* HomeNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavViewController.m; sourceTree = "<group>"; };
+		947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNavViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +206,9 @@
 				942AE58517AE919000A65988 /* MainWindow.xib */,
 				942AE55F17AE8C0000A65988 /* AppDelegate.h */,
 				942AE56017AE8C0000A65988 /* AppDelegate.m */,
+				947A8D9617BA7F900027AF51 /* HomeNavViewController.h */,
+				947A8D9717BA7F900027AF51 /* HomeNavViewController.m */,
+				947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */,
 				942AE58C17AE95F100A65988 /* SplashViewController.h */,
 				942AE58D17AE95F100A65988 /* SplashViewController.m */,
 				942AE58E17AE95F100A65988 /* SplashViewController.xib */,
@@ -204,6 +221,7 @@
 				9413029C17AFDCC600F3F12D /* RoutesViewController.h */,
 				9413029D17AFDCC600F3F12D /* RoutesViewController.m */,
 				9413029E17AFDCC600F3F12D /* RoutesViewController.xib */,
+				947A8D8617BA725F0027AF51 /* vendor */,
 				942AE55717AE8C0000A65988 /* Supporting Files */,
 			);
 			path = EZMove;
@@ -240,6 +258,28 @@
 				942AE57717AE8C0000A65988 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		947A8D8617BA725F0027AF51 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				947A8D8717BA73A50027AF51 /* PKRevealController */,
+			);
+			name = vendor;
+			sourceTree = "<group>";
+		};
+		947A8D8717BA73A50027AF51 /* PKRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				947A8D8817BA73A50027AF51 /* PKRevealController.h */,
+				947A8D8917BA73A50027AF51 /* PKRevealController.m */,
+				947A8D8A17BA73A50027AF51 /* PKRevealControllerContainerView.h */,
+				947A8D8B17BA73A50027AF51 /* PKRevealControllerContainerView.m */,
+				947A8D8C17BA73A50027AF51 /* UIViewController+PKRevealController.h */,
+				947A8D8D17BA73A50027AF51 /* UIViewController+PKRevealController.m */,
+			);
+			name = PKRevealController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +363,7 @@
 				9413029B17AFDB7100F3F12D /* SavedTripsViewController.xib in Resources */,
 				941302A017AFDCC600F3F12D /* RoutesViewController.xib in Resources */,
 				941302A417AFED4E00F3F12D /* GoogleMaps.bundle in Resources */,
+				947A8D9A17BA7F900027AF51 /* HomeNavViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +404,10 @@
 				942AE58F17AE95F100A65988 /* SplashViewController.m in Sources */,
 				9413029A17AFDB7100F3F12D /* SavedTripsViewController.m in Sources */,
 				9413029F17AFDCC600F3F12D /* RoutesViewController.m in Sources */,
+				947A8D8E17BA73A50027AF51 /* PKRevealController.m in Sources */,
+				947A8D8F17BA73A50027AF51 /* PKRevealControllerContainerView.m in Sources */,
+				947A8D9017BA73A50027AF51 /* UIViewController+PKRevealController.m in Sources */,
+				947A8D9917BA7F900027AF51 /* HomeNavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

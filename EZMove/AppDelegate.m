@@ -7,18 +7,34 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeNavViewController.h"
+#import "MapViewController.h"
+#import "SavedTripsViewController.h"
+#import "RoutesViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize vcSplash;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Google Maps API Key
     [GMSServices provideAPIKey:@"AIzaSyD3myOe2BRIHkxTWwQoxSWHOLrIXWWYhOM"];
-    self.window.rootViewController = vcSplash;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // Step 1: Create your controllers.
+    MapViewController *mapVC = [[MapViewController alloc] init];
+    HomeNavViewController *homeNavVC = [[HomeNavViewController alloc] initWithRootViewController:mapVC];
+    SavedTripsViewController *leftVC = [[SavedTripsViewController alloc] init];
+    RoutesViewController *rightVC = [[RoutesViewController alloc] init];
+    
+    // Step 3: Instantiate your PKRevealController.
+    self.revealController = [PKRevealController revealControllerWithFrontViewController:homeNavVC leftViewController:leftVC rightViewController:rightVC options:nil];
+
+    // Step 4: Set it as your root view controller.
+    self.window.rootViewController = self.revealController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
