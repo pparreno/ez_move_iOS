@@ -7,16 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C422E9317B6296C000B6B81 /* PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C422E8E17B6296C000B6B81 /* PKRevealController.m */; };
-		4C422E9417B6296C000B6B81 /* PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C422E8E17B6296C000B6B81 /* PKRevealController.m */; };
-		4C422E9517B6296C000B6B81 /* PKRevealControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C422E9017B6296C000B6B81 /* PKRevealControllerContainerView.m */; };
-		4C422E9617B6296C000B6B81 /* PKRevealControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C422E9017B6296C000B6B81 /* PKRevealControllerContainerView.m */; };
-		4C422E9717B6296C000B6B81 /* UIViewController+PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C422E9217B6296C000B6B81 /* UIViewController+PKRevealController.m */; };
-		4C422E9817B6296C000B6B81 /* UIViewController+PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C422E9217B6296C000B6B81 /* UIViewController+PKRevealController.m */; };
-		4C422E9C17B62A89000B6B81 /* EntryNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C422E9A17B62A89000B6B81 /* EntryNavViewController.m */; };
-		4C422E9D17B62A89000B6B81 /* EntryNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C422E9A17B62A89000B6B81 /* EntryNavViewController.m */; };
-		4C422E9E17B62A89000B6B81 /* EntryNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C422E9B17B62A89000B6B81 /* EntryNavViewController.xib */; };
-		4C422E9F17B62A89000B6B81 /* EntryNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C422E9B17B62A89000B6B81 /* EntryNavViewController.xib */; };
 		9413029A17AFDB7100F3F12D /* SavedTripsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9413029817AFDB7100F3F12D /* SavedTripsViewController.m */; };
 		9413029B17AFDB7100F3F12D /* SavedTripsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9413029917AFDB7100F3F12D /* SavedTripsViewController.xib */; };
 		9413029F17AFDCC600F3F12D /* RoutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9413029D17AFDCC600F3F12D /* RoutesViewController.m */; };
@@ -54,6 +44,11 @@
 		942AE58B17AE95B100A65988 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942AE58917AE95B100A65988 /* MapViewController.xib */; };
 		942AE58F17AE95F100A65988 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AE58D17AE95F100A65988 /* SplashViewController.m */; };
 		942AE59017AE95F100A65988 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942AE58E17AE95F100A65988 /* SplashViewController.xib */; };
+		947A8D8E17BA73A50027AF51 /* PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8917BA73A50027AF51 /* PKRevealController.m */; };
+		947A8D8F17BA73A50027AF51 /* PKRevealControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8B17BA73A50027AF51 /* PKRevealControllerContainerView.m */; };
+		947A8D9017BA73A50027AF51 /* UIViewController+PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8D17BA73A50027AF51 /* UIViewController+PKRevealController.m */; };
+		947A8D9917BA7F900027AF51 /* HomeNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D9717BA7F900027AF51 /* HomeNavViewController.m */; };
+		947A8D9A17BA7F900027AF51 /* HomeNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,15 +62,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C422E8D17B6296C000B6B81 /* PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKRevealController.h; path = vendor/PKRevealController/PKRevealController/Controller/PKRevealController.h; sourceTree = "<group>"; };
-		4C422E8E17B6296C000B6B81 /* PKRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKRevealController.m; path = vendor/PKRevealController/PKRevealController/Controller/PKRevealController.m; sourceTree = "<group>"; };
-		4C422E8F17B6296C000B6B81 /* PKRevealControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PKRevealControllerContainerView.h; path = vendor/PKRevealController/PKRevealController/Controller/PKRevealControllerContainerView.h; sourceTree = "<group>"; };
-		4C422E9017B6296C000B6B81 /* PKRevealControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PKRevealControllerContainerView.m; path = vendor/PKRevealController/PKRevealController/Controller/PKRevealControllerContainerView.m; sourceTree = "<group>"; };
-		4C422E9117B6296C000B6B81 /* UIViewController+PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+PKRevealController.h"; path = "vendor/PKRevealController/PKRevealController/Controller/UIViewController+PKRevealController.h"; sourceTree = "<group>"; };
-		4C422E9217B6296C000B6B81 /* UIViewController+PKRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+PKRevealController.m"; path = "vendor/PKRevealController/PKRevealController/Controller/UIViewController+PKRevealController.m"; sourceTree = "<group>"; };
-		4C422E9917B62A89000B6B81 /* EntryNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryNavViewController.h; sourceTree = "<group>"; };
-		4C422E9A17B62A89000B6B81 /* EntryNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryNavViewController.m; sourceTree = "<group>"; };
-		4C422E9B17B62A89000B6B81 /* EntryNavViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryNavViewController.xib; sourceTree = "<group>"; };
 		9413029717AFDB7100F3F12D /* SavedTripsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedTripsViewController.h; sourceTree = "<group>"; };
 		9413029817AFDB7100F3F12D /* SavedTripsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedTripsViewController.m; sourceTree = "<group>"; };
 		9413029917AFDB7100F3F12D /* SavedTripsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedTripsViewController.xib; sourceTree = "<group>"; };
@@ -122,6 +108,15 @@
 		942AE58C17AE95F100A65988 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		942AE58D17AE95F100A65988 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		942AE58E17AE95F100A65988 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		947A8D8817BA73A50027AF51 /* PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRevealController.h; sourceTree = "<group>"; };
+		947A8D8917BA73A50027AF51 /* PKRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRevealController.m; sourceTree = "<group>"; };
+		947A8D8A17BA73A50027AF51 /* PKRevealControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRevealControllerContainerView.h; sourceTree = "<group>"; };
+		947A8D8B17BA73A50027AF51 /* PKRevealControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRevealControllerContainerView.m; sourceTree = "<group>"; };
+		947A8D8C17BA73A50027AF51 /* UIViewController+PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PKRevealController.h"; sourceTree = "<group>"; };
+		947A8D8D17BA73A50027AF51 /* UIViewController+PKRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PKRevealController.m"; sourceTree = "<group>"; };
+		947A8D9617BA7F900027AF51 /* HomeNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavViewController.h; sourceTree = "<group>"; };
+		947A8D9717BA7F900027AF51 /* HomeNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavViewController.m; sourceTree = "<group>"; };
+		947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNavViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,31 +156,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C422E8217B62106000B6B81 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				4C422E8317B62344000B6B81 /* PKRevealController */,
-				4C422E9917B62A89000B6B81 /* EntryNavViewController.h */,
-				4C422E9A17B62A89000B6B81 /* EntryNavViewController.m */,
-				4C422E9B17B62A89000B6B81 /* EntryNavViewController.xib */,
-			);
-			name = Vendor;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		4C422E8317B62344000B6B81 /* PKRevealController */ = {
-			isa = PBXGroup;
-			children = (
-				4C422E8D17B6296C000B6B81 /* PKRevealController.h */,
-				4C422E8E17B6296C000B6B81 /* PKRevealController.m */,
-				4C422E8F17B6296C000B6B81 /* PKRevealControllerContainerView.h */,
-				4C422E9017B6296C000B6B81 /* PKRevealControllerContainerView.m */,
-				4C422E9117B6296C000B6B81 /* UIViewController+PKRevealController.h */,
-				4C422E9217B6296C000B6B81 /* UIViewController+PKRevealController.m */,
-			);
-			name = PKRevealController;
-			sourceTree = "<group>";
-		};
 		942AE54417AE8C0000A65988 = {
 			isa = PBXGroup;
 			children = (
@@ -233,10 +203,12 @@
 		942AE55617AE8C0000A65988 /* EZMove */ = {
 			isa = PBXGroup;
 			children = (
-				4C422E8217B62106000B6B81 /* Vendor */,
 				942AE58517AE919000A65988 /* MainWindow.xib */,
 				942AE55F17AE8C0000A65988 /* AppDelegate.h */,
 				942AE56017AE8C0000A65988 /* AppDelegate.m */,
+				947A8D9617BA7F900027AF51 /* HomeNavViewController.h */,
+				947A8D9717BA7F900027AF51 /* HomeNavViewController.m */,
+				947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */,
 				942AE58C17AE95F100A65988 /* SplashViewController.h */,
 				942AE58D17AE95F100A65988 /* SplashViewController.m */,
 				942AE58E17AE95F100A65988 /* SplashViewController.xib */,
@@ -249,6 +221,7 @@
 				9413029C17AFDCC600F3F12D /* RoutesViewController.h */,
 				9413029D17AFDCC600F3F12D /* RoutesViewController.m */,
 				9413029E17AFDCC600F3F12D /* RoutesViewController.xib */,
+				947A8D8617BA725F0027AF51 /* vendor */,
 				942AE55717AE8C0000A65988 /* Supporting Files */,
 			);
 			path = EZMove;
@@ -285,6 +258,28 @@
 				942AE57717AE8C0000A65988 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		947A8D8617BA725F0027AF51 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				947A8D8717BA73A50027AF51 /* PKRevealController */,
+			);
+			name = vendor;
+			sourceTree = "<group>";
+		};
+		947A8D8717BA73A50027AF51 /* PKRevealController */ = {
+			isa = PBXGroup;
+			children = (
+				947A8D8817BA73A50027AF51 /* PKRevealController.h */,
+				947A8D8917BA73A50027AF51 /* PKRevealController.m */,
+				947A8D8A17BA73A50027AF51 /* PKRevealControllerContainerView.h */,
+				947A8D8B17BA73A50027AF51 /* PKRevealControllerContainerView.m */,
+				947A8D8C17BA73A50027AF51 /* UIViewController+PKRevealController.h */,
+				947A8D8D17BA73A50027AF51 /* UIViewController+PKRevealController.m */,
+			);
+			name = PKRevealController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,7 +363,7 @@
 				9413029B17AFDB7100F3F12D /* SavedTripsViewController.xib in Resources */,
 				941302A017AFDCC600F3F12D /* RoutesViewController.xib in Resources */,
 				941302A417AFED4E00F3F12D /* GoogleMaps.bundle in Resources */,
-				4C422E9E17B62A89000B6B81 /* EntryNavViewController.xib in Resources */,
+				947A8D9A17BA7F900027AF51 /* HomeNavViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +372,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				942AE57917AE8C0000A65988 /* InfoPlist.strings in Resources */,
-				4C422E9F17B62A89000B6B81 /* EntryNavViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,10 +404,10 @@
 				942AE58F17AE95F100A65988 /* SplashViewController.m in Sources */,
 				9413029A17AFDB7100F3F12D /* SavedTripsViewController.m in Sources */,
 				9413029F17AFDCC600F3F12D /* RoutesViewController.m in Sources */,
-				4C422E9317B6296C000B6B81 /* PKRevealController.m in Sources */,
-				4C422E9517B6296C000B6B81 /* PKRevealControllerContainerView.m in Sources */,
-				4C422E9717B6296C000B6B81 /* UIViewController+PKRevealController.m in Sources */,
-				4C422E9C17B62A89000B6B81 /* EntryNavViewController.m in Sources */,
+				947A8D8E17BA73A50027AF51 /* PKRevealController.m in Sources */,
+				947A8D8F17BA73A50027AF51 /* PKRevealControllerContainerView.m in Sources */,
+				947A8D9017BA73A50027AF51 /* UIViewController+PKRevealController.m in Sources */,
+				947A8D9917BA7F900027AF51 /* HomeNavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,10 +416,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				942AE57C17AE8C0000A65988 /* EZMoveTests.m in Sources */,
-				4C422E9417B6296C000B6B81 /* PKRevealController.m in Sources */,
-				4C422E9617B6296C000B6B81 /* PKRevealControllerContainerView.m in Sources */,
-				4C422E9817B6296C000B6B81 /* UIViewController+PKRevealController.m in Sources */,
-				4C422E9D17B62A89000B6B81 /* EntryNavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +515,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZMove/EZMove-Prefix.pch";
 				INFOPLIST_FILE = "EZMove/EZMove-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -542,7 +532,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZMove/EZMove-Prefix.pch";
 				INFOPLIST_FILE = "EZMove/EZMove-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
