@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Initializations
+    self.navigationItem.title = @"title";
+    self.title = @"EZ - MOVE";
 }
 
 - (void)didReceiveMemoryWarning

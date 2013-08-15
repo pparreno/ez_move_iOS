@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9413029A17AFDB7100F3F12D /* SavedTripsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9413029817AFDB7100F3F12D /* SavedTripsViewController.m */; };
-		9413029B17AFDB7100F3F12D /* SavedTripsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9413029917AFDB7100F3F12D /* SavedTripsViewController.xib */; };
 		9413029F17AFDCC600F3F12D /* RoutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9413029D17AFDCC600F3F12D /* RoutesViewController.m */; };
 		941302A017AFDCC600F3F12D /* RoutesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9413029E17AFDCC600F3F12D /* RoutesViewController.xib */; };
 		941302A217AFED1600F3F12D /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941302A117AFED1600F3F12D /* GoogleMaps.framework */; };
@@ -42,13 +40,13 @@
 		942AE58617AE919000A65988 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942AE58517AE919000A65988 /* MainWindow.xib */; };
 		942AE58A17AE95B100A65988 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AE58817AE95B100A65988 /* MapViewController.m */; };
 		942AE58B17AE95B100A65988 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942AE58917AE95B100A65988 /* MapViewController.xib */; };
-		942AE58F17AE95F100A65988 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AE58D17AE95F100A65988 /* SplashViewController.m */; };
-		942AE59017AE95F100A65988 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942AE58E17AE95F100A65988 /* SplashViewController.xib */; };
 		947A8D8E17BA73A50027AF51 /* PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8917BA73A50027AF51 /* PKRevealController.m */; };
 		947A8D8F17BA73A50027AF51 /* PKRevealControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8B17BA73A50027AF51 /* PKRevealControllerContainerView.m */; };
 		947A8D9017BA73A50027AF51 /* UIViewController+PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8D17BA73A50027AF51 /* UIViewController+PKRevealController.m */; };
 		947A8D9917BA7F900027AF51 /* HomeNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D9717BA7F900027AF51 /* HomeNavViewController.m */; };
 		947A8D9A17BA7F900027AF51 /* HomeNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */; };
+		948DA79A17BD0E0100E6BBA0 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948DA79817BD0E0100E6BBA0 /* MenuViewController.m */; };
+		948DA79B17BD0E0100E6BBA0 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9413029717AFDB7100F3F12D /* SavedTripsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedTripsViewController.h; sourceTree = "<group>"; };
-		9413029817AFDB7100F3F12D /* SavedTripsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedTripsViewController.m; sourceTree = "<group>"; };
-		9413029917AFDB7100F3F12D /* SavedTripsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedTripsViewController.xib; sourceTree = "<group>"; };
 		9413029C17AFDCC600F3F12D /* RoutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesViewController.h; sourceTree = "<group>"; };
 		9413029D17AFDCC600F3F12D /* RoutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesViewController.m; sourceTree = "<group>"; };
 		9413029E17AFDCC600F3F12D /* RoutesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutesViewController.xib; sourceTree = "<group>"; };
@@ -105,9 +100,6 @@
 		942AE58717AE95B100A65988 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		942AE58817AE95B100A65988 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		942AE58917AE95B100A65988 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
-		942AE58C17AE95F100A65988 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
-		942AE58D17AE95F100A65988 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
-		942AE58E17AE95F100A65988 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		947A8D8817BA73A50027AF51 /* PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRevealController.h; sourceTree = "<group>"; };
 		947A8D8917BA73A50027AF51 /* PKRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRevealController.m; sourceTree = "<group>"; };
 		947A8D8A17BA73A50027AF51 /* PKRevealControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRevealControllerContainerView.h; sourceTree = "<group>"; };
@@ -117,6 +109,9 @@
 		947A8D9617BA7F900027AF51 /* HomeNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavViewController.h; sourceTree = "<group>"; };
 		947A8D9717BA7F900027AF51 /* HomeNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavViewController.m; sourceTree = "<group>"; };
 		947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNavViewController.xib; sourceTree = "<group>"; };
+		948DA79717BD0E0100E6BBA0 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		948DA79817BD0E0100E6BBA0 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,15 +204,12 @@
 				947A8D9617BA7F900027AF51 /* HomeNavViewController.h */,
 				947A8D9717BA7F900027AF51 /* HomeNavViewController.m */,
 				947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */,
-				942AE58C17AE95F100A65988 /* SplashViewController.h */,
-				942AE58D17AE95F100A65988 /* SplashViewController.m */,
-				942AE58E17AE95F100A65988 /* SplashViewController.xib */,
+				948DA79717BD0E0100E6BBA0 /* MenuViewController.h */,
+				948DA79817BD0E0100E6BBA0 /* MenuViewController.m */,
+				948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */,
 				942AE58717AE95B100A65988 /* MapViewController.h */,
 				942AE58817AE95B100A65988 /* MapViewController.m */,
 				942AE58917AE95B100A65988 /* MapViewController.xib */,
-				9413029717AFDB7100F3F12D /* SavedTripsViewController.h */,
-				9413029817AFDB7100F3F12D /* SavedTripsViewController.m */,
-				9413029917AFDB7100F3F12D /* SavedTripsViewController.xib */,
 				9413029C17AFDCC600F3F12D /* RoutesViewController.h */,
 				9413029D17AFDCC600F3F12D /* RoutesViewController.m */,
 				9413029E17AFDCC600F3F12D /* RoutesViewController.xib */,
@@ -359,11 +351,10 @@
 				942AE56717AE8C0000A65988 /* Default-568h@2x.png in Resources */,
 				942AE58617AE919000A65988 /* MainWindow.xib in Resources */,
 				942AE58B17AE95B100A65988 /* MapViewController.xib in Resources */,
-				942AE59017AE95F100A65988 /* SplashViewController.xib in Resources */,
-				9413029B17AFDB7100F3F12D /* SavedTripsViewController.xib in Resources */,
 				941302A017AFDCC600F3F12D /* RoutesViewController.xib in Resources */,
 				941302A417AFED4E00F3F12D /* GoogleMaps.bundle in Resources */,
 				947A8D9A17BA7F900027AF51 /* HomeNavViewController.xib in Resources */,
+				948DA79B17BD0E0100E6BBA0 /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,13 +392,12 @@
 				942AE55D17AE8C0000A65988 /* main.m in Sources */,
 				942AE56117AE8C0000A65988 /* AppDelegate.m in Sources */,
 				942AE58A17AE95B100A65988 /* MapViewController.m in Sources */,
-				942AE58F17AE95F100A65988 /* SplashViewController.m in Sources */,
-				9413029A17AFDB7100F3F12D /* SavedTripsViewController.m in Sources */,
 				9413029F17AFDCC600F3F12D /* RoutesViewController.m in Sources */,
 				947A8D8E17BA73A50027AF51 /* PKRevealController.m in Sources */,
 				947A8D8F17BA73A50027AF51 /* PKRevealControllerContainerView.m in Sources */,
 				947A8D9017BA73A50027AF51 /* UIViewController+PKRevealController.m in Sources */,
 				947A8D9917BA7F900027AF51 /* HomeNavViewController.m in Sources */,
+				948DA79A17BD0E0100E6BBA0 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

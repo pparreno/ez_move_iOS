@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "HomeNavViewController.h"
 #import "MapViewController.h"
-#import "SavedTripsViewController.h"
+#import "MenuViewController.h"
 #import "RoutesViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 
@@ -26,11 +26,11 @@
     // Step 1: Create your controllers.
     MapViewController *mapVC = [[MapViewController alloc] init];
     HomeNavViewController *homeNavVC = [[HomeNavViewController alloc] initWithRootViewController:mapVC];
-    SavedTripsViewController *leftVC = [[SavedTripsViewController alloc] init];
+    MenuViewController *menuVC = [[MenuViewController alloc] init];
     RoutesViewController *rightVC = [[RoutesViewController alloc] init];
     
     // Step 3: Instantiate your PKRevealController.
-    self.revealController = [PKRevealController revealControllerWithFrontViewController:homeNavVC leftViewController:leftVC rightViewController:rightVC options:nil];
+    self.revealController = [PKRevealController revealControllerWithFrontViewController:homeNavVC leftViewController:menuVC rightViewController:rightVC options:nil];
 
     // Step 4: Set it as your root view controller.
     self.window.rootViewController = self.revealController;
