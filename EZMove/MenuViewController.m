@@ -13,7 +13,8 @@
 @end
 
 @implementation MenuViewController{
-    NSArray *menuChoices;
+    NSArray *menuItems;
+    NSArray *menuImages;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,7 +30,8 @@
 {
     [super viewDidLoad];
     // Initialize choices in menu
-    menuChoices = [NSArray arrayWithObjects:@"Current Trip", @"New Trip", @"Saved Trips", @"Routes", @"Settings", @"Help",nil];
+    menuItems = [NSArray arrayWithObjects:@"Current Trip", @"New Trip", @"Saved Trips", @"Routes", @"Settings", @"Help",nil];
+    menuImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"btn-current.png"], [UIImage imageNamed:@"btn-new.png"], [UIImage imageNamed:@"btn-saved.png"], [UIImage imageNamed:@"btn-route.png"], [UIImage imageNamed:@"btn-settings.png"], [UIImage imageNamed:@"btn-help.png"],nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +44,7 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [menuChoices count];
+    return [menuItems count];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -52,8 +54,10 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:menuChoiceIdentifier];
     }
-    cell.textLabel.text = [menuChoices objectAtIndex:indexPath.row];
+    cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
     [cell.textLabel setTextColor:[UIColor whiteColor]];
+    [cell.textLabel setFont:[UIFont fontWithName:@"Verdana" size:18.0]];
+    cell.imageView.image = [menuImages objectAtIndex:indexPath.row];
     return cell;
 }
 

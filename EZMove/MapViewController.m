@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "PKRevealController.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface MapViewController ()
@@ -16,7 +17,6 @@
 @implementation MapViewController{
     GMSMapView *mapView_;
 }
-@synthesize btnLocate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,20 +30,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:10.3178
-                                                            longitude:123.9050
-                                                                 zoom:15];
-    mapView_ = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
+    // Get current location
     mapView_.myLocationEnabled = YES;
-    [self.view addSubview:mapView_];
-    [mapView_ addSubview:btnLocate];
     
-    // Creates a marker in the center of the map.
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(10.3178, 123.9050);
-    marker.title = @"Ayala Center Cebu";
-    marker.snippet = @"Cebu, Philippines";
+    //CLLocation *myLocation = mapView_.myLocation;
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:10.3178f
+                                                            longitude:123.9050f
+                                                                 zoom:17];
+    mapView_ = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
+    CLLocationCoordinate2D position = CLLocationCoordinate2DMake(10.3178f, 123.9050f);
+    GMSMarker *marker = [GMSMarker markerWithPosition:position];
+    marker.title = @"You are here";
     marker.map = mapView_;
+    [self.view addSubview:mapView_];
+
+    
+    // Initialize navigation bar
+    self.title = @"EZ - MOVE";
+    UIImage *revealImagePortrait = [UIImage imageNamed:@"reveal_menu_icon_portrait"];
+    UIImage *revealImageLandscape = [UIImage imageNamed:@"reveal_menu_icon_landscape"];
+    
+    if (self.navigationController.revealController.type & PKRevealControllerTypeLeft)
+    {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:revealImagePortrait landscapeImagePhone:revealImageLandscape style:UIBarButtonItemStylePlain target:self action:@selector(showLeftView:)];
+    }
+    
+    if (self.navigationController.revealController.type & PKRevealControllerTypeRight)
+    {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:revealImagePortrait landscapeImagePhone:revealImageLandscape style:UIBarButtonItemStylePlain target:self action:@selector(showRightView:)];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,9 +67,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)getCurrentLocation:(id)sender
+- (void)showLeftView:(id)sender
 {
-    
+    if (self.navigationController.revealController.focusedController == self.navigationController.revealController.leftViewController)
+    {
+        [self.navigationController.revealController showViewController:self.navigationController.revealController.frontViewController];
+    }
+    else
+    {
+        [self.navigationController.revealController showViewController:self.navigationController.revealController.leftViewController];
+    }
+}
+
+- (void)showRightView:(id)sender
+{
+    if (self.navigationController.revealController.focusedController == self.navigationController.revealController.rightViewController)
+    {
+        [self.navigationController.revealController showViewController:self.navigationController.revealController.frontViewController];
+    }
+    else
+    {
+        [self.navigationController.revealController showViewController:self.navigationController.revealController.rightViewController];
+    }
 }
 
 @end

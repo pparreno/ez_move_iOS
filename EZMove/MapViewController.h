@@ -9,7 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface MapViewController : UIViewController
-@property (nonatomic, strong) IBOutlet UIButton *btnLocate;
-
-- (IBAction)getCurrentLocation:(id)sender;
 @end
