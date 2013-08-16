@@ -26,8 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Initializations
-    self.navigationItem.title = @"title";
+    // Initialization
     self.title = @"EZ - MOVE";
 }
 

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9413029F17AFDCC600F3F12D /* RoutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9413029D17AFDCC600F3F12D /* RoutesViewController.m */; };
-		941302A017AFDCC600F3F12D /* RoutesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9413029E17AFDCC600F3F12D /* RoutesViewController.xib */; };
 		941302A217AFED1600F3F12D /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941302A117AFED1600F3F12D /* GoogleMaps.framework */; };
 		941302A417AFED4E00F3F12D /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 941302A317AFED4E00F3F12D /* GoogleMaps.bundle */; };
 		941302A617AFED7000F3F12D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941302A517AFED7000F3F12D /* AVFoundation.framework */; };
@@ -46,6 +44,8 @@
 		945D76A517BE72A300EDE5E9 /* btn-route.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D769F17BE72A300EDE5E9 /* btn-route.png */; };
 		945D76A617BE72A300EDE5E9 /* btn-new.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D76A017BE72A300EDE5E9 /* btn-new.png */; };
 		945D76A717BE72A300EDE5E9 /* btn-help.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D76A117BE72A300EDE5E9 /* btn-help.png */; };
+		945D76AB17BE873B00EDE5E9 /* RouteInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945D76A917BE873B00EDE5E9 /* RouteInfoViewController.m */; };
+		945D76AC17BE873B00EDE5E9 /* RouteInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 945D76AA17BE873B00EDE5E9 /* RouteInfoViewController.xib */; };
 		947A8D8E17BA73A50027AF51 /* PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8917BA73A50027AF51 /* PKRevealController.m */; };
 		947A8D8F17BA73A50027AF51 /* PKRevealControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8B17BA73A50027AF51 /* PKRevealControllerContainerView.m */; };
 		947A8D9017BA73A50027AF51 /* UIViewController+PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8D17BA73A50027AF51 /* UIViewController+PKRevealController.m */; };
@@ -57,6 +57,7 @@
 		9489CE2817BE6652004DC00F /* reveal_menu_icon_portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9489CE2417BE6652004DC00F /* reveal_menu_icon_portrait@2x.png */; };
 		948DA79A17BD0E0100E6BBA0 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948DA79817BD0E0100E6BBA0 /* MenuViewController.m */; };
 		948DA79B17BD0E0100E6BBA0 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */; };
+		94E17D2617BE8CEB00B1B856 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 94E17D2417BE8CEB00B1B856 /* info.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,9 +71,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9413029C17AFDCC600F3F12D /* RoutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesViewController.h; sourceTree = "<group>"; };
-		9413029D17AFDCC600F3F12D /* RoutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesViewController.m; sourceTree = "<group>"; };
-		9413029E17AFDCC600F3F12D /* RoutesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutesViewController.xib; sourceTree = "<group>"; };
 		941302A117AFED1600F3F12D /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		941302A317AFED4E00F3F12D /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		941302A517AFED7000F3F12D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +114,9 @@
 		945D769F17BE72A300EDE5E9 /* btn-route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-route.png"; sourceTree = "<group>"; };
 		945D76A017BE72A300EDE5E9 /* btn-new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new.png"; sourceTree = "<group>"; };
 		945D76A117BE72A300EDE5E9 /* btn-help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-help.png"; sourceTree = "<group>"; };
+		945D76A817BE873B00EDE5E9 /* RouteInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteInfoViewController.h; sourceTree = "<group>"; };
+		945D76A917BE873B00EDE5E9 /* RouteInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteInfoViewController.m; sourceTree = "<group>"; };
+		945D76AA17BE873B00EDE5E9 /* RouteInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RouteInfoViewController.xib; sourceTree = "<group>"; };
 		947A8D8817BA73A50027AF51 /* PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRevealController.h; sourceTree = "<group>"; };
 		947A8D8917BA73A50027AF51 /* PKRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRevealController.m; sourceTree = "<group>"; };
 		947A8D8A17BA73A50027AF51 /* PKRevealControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRevealControllerContainerView.h; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		948DA79717BD0E0100E6BBA0 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		948DA79817BD0E0100E6BBA0 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		94E17D2417BE8CEB00B1B856 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,9 +232,9 @@
 				942AE58717AE95B100A65988 /* MapViewController.h */,
 				942AE58817AE95B100A65988 /* MapViewController.m */,
 				942AE58917AE95B100A65988 /* MapViewController.xib */,
-				9413029C17AFDCC600F3F12D /* RoutesViewController.h */,
-				9413029D17AFDCC600F3F12D /* RoutesViewController.m */,
-				9413029E17AFDCC600F3F12D /* RoutesViewController.xib */,
+				945D76A817BE873B00EDE5E9 /* RouteInfoViewController.h */,
+				945D76A917BE873B00EDE5E9 /* RouteInfoViewController.m */,
+				945D76AA17BE873B00EDE5E9 /* RouteInfoViewController.xib */,
 				9489CE2017BE663D004DC00F /* images */,
 				947A8D8617BA725F0027AF51 /* vendor */,
 				942AE55717AE8C0000A65988 /* Supporting Files */,
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				945D769C17BE72A300EDE5E9 /* btn-current.png */,
+				94E17D2417BE8CEB00B1B856 /* info.png */,
 				945D769D17BE72A300EDE5E9 /* btn-settings.png */,
 				945D769E17BE72A300EDE5E9 /* btn-saved.png */,
 				945D769F17BE72A300EDE5E9 /* btn-route.png */,
@@ -389,7 +392,6 @@
 				942AE56717AE8C0000A65988 /* Default-568h@2x.png in Resources */,
 				942AE58617AE919000A65988 /* MainWindow.xib in Resources */,
 				942AE58B17AE95B100A65988 /* MapViewController.xib in Resources */,
-				941302A017AFDCC600F3F12D /* RoutesViewController.xib in Resources */,
 				941302A417AFED4E00F3F12D /* GoogleMaps.bundle in Resources */,
 				947A8D9A17BA7F900027AF51 /* HomeNavViewController.xib in Resources */,
 				948DA79B17BD0E0100E6BBA0 /* MenuViewController.xib in Resources */,
@@ -403,6 +405,8 @@
 				945D76A517BE72A300EDE5E9 /* btn-route.png in Resources */,
 				945D76A617BE72A300EDE5E9 /* btn-new.png in Resources */,
 				945D76A717BE72A300EDE5E9 /* btn-help.png in Resources */,
+				945D76AC17BE873B00EDE5E9 /* RouteInfoViewController.xib in Resources */,
+				94E17D2617BE8CEB00B1B856 /* info.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,12 +444,12 @@
 				942AE55D17AE8C0000A65988 /* main.m in Sources */,
 				942AE56117AE8C0000A65988 /* AppDelegate.m in Sources */,
 				942AE58A17AE95B100A65988 /* MapViewController.m in Sources */,
-				9413029F17AFDCC600F3F12D /* RoutesViewController.m in Sources */,
 				947A8D8E17BA73A50027AF51 /* PKRevealController.m in Sources */,
 				947A8D8F17BA73A50027AF51 /* PKRevealControllerContainerView.m in Sources */,
 				947A8D9017BA73A50027AF51 /* UIViewController+PKRevealController.m in Sources */,
 				947A8D9917BA7F900027AF51 /* HomeNavViewController.m in Sources */,
 				948DA79A17BD0E0100E6BBA0 /* MenuViewController.m in Sources */,
+				945D76AB17BE873B00EDE5E9 /* RouteInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

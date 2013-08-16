@@ -46,7 +46,10 @@
 
     
     // Initialize navigation bar
-    self.title = @"EZ - MOVE";
+    self.title = @"TRIP";
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:40/255.0f green:48/255.0f blue:50/255.0f alpha:1.0f];
+    
+    // Initialize navbar buttons
     UIImage *revealImagePortrait = [UIImage imageNamed:@"reveal_menu_icon_portrait"];
     UIImage *revealImageLandscape = [UIImage imageNamed:@"reveal_menu_icon_landscape"];
     
@@ -57,7 +60,8 @@
     
     if (self.navigationController.revealController.type & PKRevealControllerTypeRight)
     {
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:revealImagePortrait landscapeImagePhone:revealImageLandscape style:UIBarButtonItemStylePlain target:self action:@selector(showRightView:)];
+        UIImage *imgInfoRightIcon = [UIImage imageNamed:@"info.png"];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:imgInfoRightIcon landscapeImagePhone:revealImageLandscape style:UIBarButtonItemStylePlain target:self action:@selector(showRightView:)];
     }
 }
 
