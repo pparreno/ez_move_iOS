@@ -1,5 +1,5 @@
 //
-//  SelStartDestViewController.h
+//  SelStartPointViewController.h
 //  EZMove
 //
 //  Created by Paul John Parreno on 8/17/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SelStartDestViewController : UIViewController
+@interface SelStartPointViewController : UIViewController
 
 @end

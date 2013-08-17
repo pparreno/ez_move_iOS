@@ -7,6 +7,8 @@
 //
 
 #import "MenuViewController.h"
+#import "SelStartPointViewController.h"
+#import "AppDelegate.h"
 
 @interface MenuViewController ()
 
@@ -40,7 +42,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-// Table View Methods
+
+#pragma mark UITableViewDatasource 
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -74,6 +77,30 @@
 -(UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     UIView *viewFooter = [[UIView alloc] initWithFrame:CGRectMake(0 ,0 , 0, 0)];
     return viewFooter;
+}
+
+#pragma mark UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+            break;
+        case 2:
+        {
+            NSLog(@"didSelectRowAtIndexPath #2");
+            SelStartPointViewController *selStartDestViewController = [[SelStartPointViewController alloc] init];
+            AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+          [appDelegate.revealController showViewController:appDelegate.revealController.frontViewController animated:YES completion:^(BOOL finished) {
+              [appDelegate.appNavController pushViewController:selStartDestViewController animated:YES];
+          }];
+        }
+            break;
+        default:
+            break;
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

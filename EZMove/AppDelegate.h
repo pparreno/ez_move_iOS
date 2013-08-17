@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HomeNavViewController.h"
 #import "PKRevealController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) IBOutlet UIWindow *window;
 @property (nonatomic, strong, readwrite) PKRevealController *revealController;
+@property (nonatomic, strong) UINavigationController *appNavController;
 
 @end

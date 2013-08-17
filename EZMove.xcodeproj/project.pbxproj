@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C9B624717BF5CB5000E45EF /* SelStartDestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B624517BF5CB5000E45EF /* SelStartDestViewController.m */; };
+		4C9B624717BF5CB5000E45EF /* SelStartPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */; };
 		4C9B624817BF5CB5000E45EF /* SelStartDestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */; };
 		4C9B624B17BF61D4000E45EF /* btn-new-trip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624917BF61D4000E45EF /* btn-new-trip.png */; };
 		4C9B624C17BF61D4000E45EF /* btn-new-trip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624A17BF61D4000E45EF /* btn-new-trip@2x.png */; };
@@ -52,7 +52,6 @@
 		947A8D8E17BA73A50027AF51 /* PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8917BA73A50027AF51 /* PKRevealController.m */; };
 		947A8D8F17BA73A50027AF51 /* PKRevealControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8B17BA73A50027AF51 /* PKRevealControllerContainerView.m */; };
 		947A8D9017BA73A50027AF51 /* UIViewController+PKRevealController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D8D17BA73A50027AF51 /* UIViewController+PKRevealController.m */; };
-		947A8D9917BA7F900027AF51 /* HomeNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947A8D9717BA7F900027AF51 /* HomeNavViewController.m */; };
 		947A8D9A17BA7F900027AF51 /* HomeNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */; };
 		9489CE2517BE6652004DC00F /* reveal_menu_icon_landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 9489CE2117BE6652004DC00F /* reveal_menu_icon_landscape.png */; };
 		9489CE2617BE6652004DC00F /* reveal_menu_icon_landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9489CE2217BE6652004DC00F /* reveal_menu_icon_landscape@2x.png */; };
@@ -74,8 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C9B624417BF5CB5000E45EF /* SelStartDestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelStartDestViewController.h; sourceTree = "<group>"; };
-		4C9B624517BF5CB5000E45EF /* SelStartDestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelStartDestViewController.m; sourceTree = "<group>"; };
+		4C9B624417BF5CB5000E45EF /* SelStartPointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelStartPointViewController.h; sourceTree = "<group>"; };
+		4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelStartPointViewController.m; sourceTree = "<group>"; };
 		4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelStartDestViewController.xib; sourceTree = "<group>"; };
 		4C9B624917BF61D4000E45EF /* btn-new-trip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new-trip.png"; sourceTree = "<group>"; };
 		4C9B624A17BF61D4000E45EF /* btn-new-trip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new-trip@2x.png"; sourceTree = "<group>"; };
@@ -130,8 +129,6 @@
 		947A8D8B17BA73A50027AF51 /* PKRevealControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRevealControllerContainerView.m; sourceTree = "<group>"; };
 		947A8D8C17BA73A50027AF51 /* UIViewController+PKRevealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PKRevealController.h"; sourceTree = "<group>"; };
 		947A8D8D17BA73A50027AF51 /* UIViewController+PKRevealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PKRevealController.m"; sourceTree = "<group>"; };
-		947A8D9617BA7F900027AF51 /* HomeNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNavViewController.h; sourceTree = "<group>"; };
-		947A8D9717BA7F900027AF51 /* HomeNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNavViewController.m; sourceTree = "<group>"; };
 		947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNavViewController.xib; sourceTree = "<group>"; };
 		9489CE2117BE6652004DC00F /* reveal_menu_icon_landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reveal_menu_icon_landscape.png; sourceTree = "<group>"; };
 		9489CE2217BE6652004DC00F /* reveal_menu_icon_landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal_menu_icon_landscape@2x.png"; sourceTree = "<group>"; };
@@ -230,14 +227,12 @@
 				942AE58517AE919000A65988 /* MainWindow.xib */,
 				942AE55F17AE8C0000A65988 /* AppDelegate.h */,
 				942AE56017AE8C0000A65988 /* AppDelegate.m */,
-				947A8D9617BA7F900027AF51 /* HomeNavViewController.h */,
-				947A8D9717BA7F900027AF51 /* HomeNavViewController.m */,
 				947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */,
 				948DA79717BD0E0100E6BBA0 /* MenuViewController.h */,
 				948DA79817BD0E0100E6BBA0 /* MenuViewController.m */,
 				948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */,
-				4C9B624417BF5CB5000E45EF /* SelStartDestViewController.h */,
-				4C9B624517BF5CB5000E45EF /* SelStartDestViewController.m */,
+				4C9B624417BF5CB5000E45EF /* SelStartPointViewController.h */,
+				4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */,
 				4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */,
 				942AE58717AE95B100A65988 /* MapViewController.h */,
 				942AE58817AE95B100A65988 /* MapViewController.m */,
@@ -460,10 +455,9 @@
 				947A8D8E17BA73A50027AF51 /* PKRevealController.m in Sources */,
 				947A8D8F17BA73A50027AF51 /* PKRevealControllerContainerView.m in Sources */,
 				947A8D9017BA73A50027AF51 /* UIViewController+PKRevealController.m in Sources */,
-				947A8D9917BA7F900027AF51 /* HomeNavViewController.m in Sources */,
 				948DA79A17BD0E0100E6BBA0 /* MenuViewController.m in Sources */,
 				945D76AB17BE873B00EDE5E9 /* RouteInfoViewController.m in Sources */,
-				4C9B624717BF5CB5000E45EF /* SelStartDestViewController.m in Sources */,
+				4C9B624717BF5CB5000E45EF /* SelStartPointViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
