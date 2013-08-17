@@ -30,8 +30,8 @@
 {
     [super viewDidLoad];
     // Initialize choices in menu
-    menuItems = [NSArray arrayWithObjects:@"Current Trip", @"New Trip", @"Saved Trips", @"Routes", @"Settings", @"Help",nil];
-    menuImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"btn-current.png"], [UIImage imageNamed:@"btn-new.png"], [UIImage imageNamed:@"btn-saved.png"], [UIImage imageNamed:@"btn-route.png"], [UIImage imageNamed:@"btn-settings.png"], [UIImage imageNamed:@"btn-help.png"],nil];
+    menuItems = [NSArray arrayWithObjects:@"EZ-MOVE", @"Current Trip", @"New Trip", @"Saved Trips", @"Routes", @"Settings", @"Help",nil];
+    menuImages = [NSArray arrayWithObjects: [[UIImage alloc] init], [UIImage imageNamed:@"btn-current.png"], [UIImage imageNamed:@"btn-new-trip.png"], [UIImage imageNamed:@"btn-saved.png"], [UIImage imageNamed:@"btn-route.png"], [UIImage imageNamed:@"btn-settings.png"], [UIImage imageNamed:@"btn-help.png"],nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,10 +54,20 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:menuChoiceIdentifier];
     }
+    
+    if(indexPath.row == 0) {
+        [cell.textLabel setFont:[UIFont fontWithName:@"Verdana-Bold" size:19.0]];
+        [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
+    } else {
+        [cell.textLabel setFont:[UIFont fontWithName:@"Verdana" size:18.0]];
+    }
+    
     cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
     [cell.textLabel setTextColor:[UIColor whiteColor]];
-    [cell.textLabel setFont:[UIFont fontWithName:@"Verdana" size:18.0]];
     cell.imageView.image = [menuImages objectAtIndex:indexPath.row];
+    
+   
+    
     return cell;
 }
 

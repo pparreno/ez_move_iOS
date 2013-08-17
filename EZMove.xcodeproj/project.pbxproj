@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C9B624717BF5CB5000E45EF /* SelStartDestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B624517BF5CB5000E45EF /* SelStartDestViewController.m */; };
+		4C9B624817BF5CB5000E45EF /* SelStartDestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */; };
+		4C9B624B17BF61D4000E45EF /* btn-new-trip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624917BF61D4000E45EF /* btn-new-trip.png */; };
+		4C9B624C17BF61D4000E45EF /* btn-new-trip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624A17BF61D4000E45EF /* btn-new-trip@2x.png */; };
 		941302A217AFED1600F3F12D /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941302A117AFED1600F3F12D /* GoogleMaps.framework */; };
 		941302A417AFED4E00F3F12D /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 941302A317AFED4E00F3F12D /* GoogleMaps.bundle */; };
 		941302A617AFED7000F3F12D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941302A517AFED7000F3F12D /* AVFoundation.framework */; };
@@ -42,7 +46,6 @@
 		945D76A317BE72A300EDE5E9 /* btn-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D769D17BE72A300EDE5E9 /* btn-settings.png */; };
 		945D76A417BE72A300EDE5E9 /* btn-saved.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D769E17BE72A300EDE5E9 /* btn-saved.png */; };
 		945D76A517BE72A300EDE5E9 /* btn-route.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D769F17BE72A300EDE5E9 /* btn-route.png */; };
-		945D76A617BE72A300EDE5E9 /* btn-new.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D76A017BE72A300EDE5E9 /* btn-new.png */; };
 		945D76A717BE72A300EDE5E9 /* btn-help.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D76A117BE72A300EDE5E9 /* btn-help.png */; };
 		945D76AB17BE873B00EDE5E9 /* RouteInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945D76A917BE873B00EDE5E9 /* RouteInfoViewController.m */; };
 		945D76AC17BE873B00EDE5E9 /* RouteInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 945D76AA17BE873B00EDE5E9 /* RouteInfoViewController.xib */; };
@@ -71,6 +74,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C9B624417BF5CB5000E45EF /* SelStartDestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelStartDestViewController.h; sourceTree = "<group>"; };
+		4C9B624517BF5CB5000E45EF /* SelStartDestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelStartDestViewController.m; sourceTree = "<group>"; };
+		4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelStartDestViewController.xib; sourceTree = "<group>"; };
+		4C9B624917BF61D4000E45EF /* btn-new-trip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new-trip.png"; sourceTree = "<group>"; };
+		4C9B624A17BF61D4000E45EF /* btn-new-trip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new-trip@2x.png"; sourceTree = "<group>"; };
 		941302A117AFED1600F3F12D /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		941302A317AFED4E00F3F12D /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		941302A517AFED7000F3F12D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -112,7 +120,6 @@
 		945D769D17BE72A300EDE5E9 /* btn-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-settings.png"; sourceTree = "<group>"; };
 		945D769E17BE72A300EDE5E9 /* btn-saved.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-saved.png"; sourceTree = "<group>"; };
 		945D769F17BE72A300EDE5E9 /* btn-route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-route.png"; sourceTree = "<group>"; };
-		945D76A017BE72A300EDE5E9 /* btn-new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new.png"; sourceTree = "<group>"; };
 		945D76A117BE72A300EDE5E9 /* btn-help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-help.png"; sourceTree = "<group>"; };
 		945D76A817BE873B00EDE5E9 /* RouteInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteInfoViewController.h; sourceTree = "<group>"; };
 		945D76A917BE873B00EDE5E9 /* RouteInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteInfoViewController.m; sourceTree = "<group>"; };
@@ -229,6 +236,9 @@
 				948DA79717BD0E0100E6BBA0 /* MenuViewController.h */,
 				948DA79817BD0E0100E6BBA0 /* MenuViewController.m */,
 				948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */,
+				4C9B624417BF5CB5000E45EF /* SelStartDestViewController.h */,
+				4C9B624517BF5CB5000E45EF /* SelStartDestViewController.m */,
+				4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */,
 				942AE58717AE95B100A65988 /* MapViewController.h */,
 				942AE58817AE95B100A65988 /* MapViewController.m */,
 				942AE58917AE95B100A65988 /* MapViewController.xib */,
@@ -300,12 +310,13 @@
 		9489CE2017BE663D004DC00F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4C9B624917BF61D4000E45EF /* btn-new-trip.png */,
+				4C9B624A17BF61D4000E45EF /* btn-new-trip@2x.png */,
 				945D769C17BE72A300EDE5E9 /* btn-current.png */,
 				94E17D2417BE8CEB00B1B856 /* info.png */,
 				945D769D17BE72A300EDE5E9 /* btn-settings.png */,
 				945D769E17BE72A300EDE5E9 /* btn-saved.png */,
 				945D769F17BE72A300EDE5E9 /* btn-route.png */,
-				945D76A017BE72A300EDE5E9 /* btn-new.png */,
 				945D76A117BE72A300EDE5E9 /* btn-help.png */,
 				9489CE2117BE6652004DC00F /* reveal_menu_icon_landscape.png */,
 				9489CE2217BE6652004DC00F /* reveal_menu_icon_landscape@2x.png */,
@@ -403,10 +414,12 @@
 				945D76A317BE72A300EDE5E9 /* btn-settings.png in Resources */,
 				945D76A417BE72A300EDE5E9 /* btn-saved.png in Resources */,
 				945D76A517BE72A300EDE5E9 /* btn-route.png in Resources */,
-				945D76A617BE72A300EDE5E9 /* btn-new.png in Resources */,
 				945D76A717BE72A300EDE5E9 /* btn-help.png in Resources */,
 				945D76AC17BE873B00EDE5E9 /* RouteInfoViewController.xib in Resources */,
 				94E17D2617BE8CEB00B1B856 /* info.png in Resources */,
+				4C9B624817BF5CB5000E45EF /* SelStartDestViewController.xib in Resources */,
+				4C9B624B17BF61D4000E45EF /* btn-new-trip.png in Resources */,
+				4C9B624C17BF61D4000E45EF /* btn-new-trip@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +463,7 @@
 				947A8D9917BA7F900027AF51 /* HomeNavViewController.m in Sources */,
 				948DA79A17BD0E0100E6BBA0 /* MenuViewController.m in Sources */,
 				945D76AB17BE873B00EDE5E9 /* RouteInfoViewController.m in Sources */,
+				4C9B624717BF5CB5000E45EF /* SelStartDestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
