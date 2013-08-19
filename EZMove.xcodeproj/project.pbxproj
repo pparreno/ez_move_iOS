@@ -42,6 +42,8 @@
 		942AE58617AE919000A65988 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942AE58517AE919000A65988 /* MainWindow.xib */; };
 		942AE58A17AE95B100A65988 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AE58817AE95B100A65988 /* MapViewController.m */; };
 		942AE58B17AE95B100A65988 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942AE58917AE95B100A65988 /* MapViewController.xib */; };
+		942F12B417C2636F0098BF31 /* NewUserOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942F12B217C2636F0098BF31 /* NewUserOptionViewController.m */; };
+		942F12B517C2636F0098BF31 /* NewUserOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942F12B317C2636F0098BF31 /* NewUserOptionViewController.xib */; };
 		945D76A217BE72A300EDE5E9 /* btn-current.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D769C17BE72A300EDE5E9 /* btn-current.png */; };
 		945D76A317BE72A300EDE5E9 /* btn-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D769D17BE72A300EDE5E9 /* btn-settings.png */; };
 		945D76A417BE72A300EDE5E9 /* btn-saved.png in Resources */ = {isa = PBXBuildFile; fileRef = 945D769E17BE72A300EDE5E9 /* btn-saved.png */; };
@@ -115,6 +117,9 @@
 		942AE58717AE95B100A65988 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		942AE58817AE95B100A65988 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		942AE58917AE95B100A65988 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		942F12B117C2636F0098BF31 /* NewUserOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewUserOptionViewController.h; sourceTree = "<group>"; };
+		942F12B217C2636F0098BF31 /* NewUserOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewUserOptionViewController.m; sourceTree = "<group>"; };
+		942F12B317C2636F0098BF31 /* NewUserOptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewUserOptionViewController.xib; sourceTree = "<group>"; };
 		945D769C17BE72A300EDE5E9 /* btn-current.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-current.png"; sourceTree = "<group>"; };
 		945D769D17BE72A300EDE5E9 /* btn-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-settings.png"; sourceTree = "<group>"; };
 		945D769E17BE72A300EDE5E9 /* btn-saved.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-saved.png"; sourceTree = "<group>"; };
@@ -224,24 +229,10 @@
 		942AE55617AE8C0000A65988 /* EZMove */ = {
 			isa = PBXGroup;
 			children = (
-				942AE58517AE919000A65988 /* MainWindow.xib */,
-				942AE55F17AE8C0000A65988 /* AppDelegate.h */,
-				942AE56017AE8C0000A65988 /* AppDelegate.m */,
-				947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */,
-				948DA79717BD0E0100E6BBA0 /* MenuViewController.h */,
-				948DA79817BD0E0100E6BBA0 /* MenuViewController.m */,
-				948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */,
-				4C9B624417BF5CB5000E45EF /* SelStartPointViewController.h */,
-				4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */,
-				4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */,
-				942AE58717AE95B100A65988 /* MapViewController.h */,
-				942AE58817AE95B100A65988 /* MapViewController.m */,
-				942AE58917AE95B100A65988 /* MapViewController.xib */,
-				945D76A817BE873B00EDE5E9 /* RouteInfoViewController.h */,
-				945D76A917BE873B00EDE5E9 /* RouteInfoViewController.m */,
-				945D76AA17BE873B00EDE5E9 /* RouteInfoViewController.xib */,
-				9489CE2017BE663D004DC00F /* images */,
-				947A8D8617BA725F0027AF51 /* vendor */,
+				942F12AF17C261FF0098BF31 /* Home */,
+				942F12B017C262260098BF31 /* New Trip */,
+				9489CE2017BE663D004DC00F /* Images */,
+				947A8D8617BA725F0027AF51 /* Vendor */,
 				942AE55717AE8C0000A65988 /* Supporting Files */,
 			);
 			path = EZMove;
@@ -280,12 +271,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		947A8D8617BA725F0027AF51 /* vendor */ = {
+		942F12AF17C261FF0098BF31 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				942AE58517AE919000A65988 /* MainWindow.xib */,
+				942AE55F17AE8C0000A65988 /* AppDelegate.h */,
+				942AE56017AE8C0000A65988 /* AppDelegate.m */,
+				947A8D9817BA7F900027AF51 /* HomeNavViewController.xib */,
+				948DA79717BD0E0100E6BBA0 /* MenuViewController.h */,
+				948DA79817BD0E0100E6BBA0 /* MenuViewController.m */,
+				948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */,
+				942AE58717AE95B100A65988 /* MapViewController.h */,
+				942AE58817AE95B100A65988 /* MapViewController.m */,
+				942AE58917AE95B100A65988 /* MapViewController.xib */,
+				945D76A817BE873B00EDE5E9 /* RouteInfoViewController.h */,
+				945D76A917BE873B00EDE5E9 /* RouteInfoViewController.m */,
+				945D76AA17BE873B00EDE5E9 /* RouteInfoViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		942F12B017C262260098BF31 /* New Trip */ = {
+			isa = PBXGroup;
+			children = (
+				4C9B624417BF5CB5000E45EF /* SelStartPointViewController.h */,
+				4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */,
+				4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */,
+				942F12B117C2636F0098BF31 /* NewUserOptionViewController.h */,
+				942F12B217C2636F0098BF31 /* NewUserOptionViewController.m */,
+				942F12B317C2636F0098BF31 /* NewUserOptionViewController.xib */,
+			);
+			name = "New Trip";
+			sourceTree = "<group>";
+		};
+		947A8D8617BA725F0027AF51 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
 				947A8D8717BA73A50027AF51 /* PKRevealController */,
 			);
-			name = vendor;
+			name = Vendor;
 			sourceTree = "<group>";
 		};
 		947A8D8717BA73A50027AF51 /* PKRevealController */ = {
@@ -302,7 +326,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		9489CE2017BE663D004DC00F /* images */ = {
+		9489CE2017BE663D004DC00F /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				4C9B624917BF61D4000E45EF /* btn-new-trip.png */,
@@ -318,7 +342,7 @@
 				9489CE2317BE6652004DC00F /* reveal_menu_icon_portrait.png */,
 				9489CE2417BE6652004DC00F /* reveal_menu_icon_portrait@2x.png */,
 			);
-			name = images;
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +439,7 @@
 				4C9B624817BF5CB5000E45EF /* SelStartDestViewController.xib in Resources */,
 				4C9B624B17BF61D4000E45EF /* btn-new-trip.png in Resources */,
 				4C9B624C17BF61D4000E45EF /* btn-new-trip@2x.png in Resources */,
+				942F12B517C2636F0098BF31 /* NewUserOptionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +483,7 @@
 				948DA79A17BD0E0100E6BBA0 /* MenuViewController.m in Sources */,
 				945D76AB17BE873B00EDE5E9 /* RouteInfoViewController.m in Sources */,
 				4C9B624717BF5CB5000E45EF /* SelStartPointViewController.m in Sources */,
+				942F12B417C2636F0098BF31 /* NewUserOptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

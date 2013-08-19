@@ -7,6 +7,7 @@
 //
 
 #import "SelStartPointViewController.h"
+#import "NewUserOptionViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface SelStartPointViewController ()
@@ -47,7 +48,10 @@
     // Initialize navigation bar
     self.title = @"New Trip";
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:40/255.0f green:48/255.0f blue:50/255.0f alpha:1.0f];
-
+    
+    // Show Modal Option
+    NewUserOptionViewController *modalOptionVC = [[NewUserOptionViewController alloc]init];
+    [self presentViewController:modalOptionVC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

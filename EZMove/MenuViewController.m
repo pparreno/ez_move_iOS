@@ -62,6 +62,9 @@
         [cell.textLabel setFont:[UIFont fontWithName:@"Verdana-Bold" size:19.0]];
         [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
     } else {
+        UIView *v = [[UIView alloc] init];
+    	v.backgroundColor = [UIColor orangeColor];
+    	cell.selectedBackgroundView = v;
         [cell.textLabel setFont:[UIFont fontWithName:@"Verdana" size:18.0]];
     }
     
@@ -91,9 +94,9 @@
             NSLog(@"didSelectRowAtIndexPath #2");
             SelStartPointViewController *selStartDestViewController = [[SelStartPointViewController alloc] init];
             AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-          [appDelegate.revealController showViewController:appDelegate.revealController.frontViewController animated:YES completion:^(BOOL finished) {
+            [appDelegate.revealController showViewController:appDelegate.revealController.frontViewController animated:YES completion:^(BOOL finished) {
               [appDelegate.appNavController pushViewController:selStartDestViewController animated:YES];
-          }];
+            }];
         }
             break;
         default:
