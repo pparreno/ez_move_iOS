@@ -86,19 +86,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
     switch (indexPath.row) {
         case 0:
             break;
+        case 1:
+        {
+            [appDelegate.revealController showViewController:appDelegate.revealController.frontViewController];
+            break;
+        }
         case 2:
         {
             NSLog(@"didSelectRowAtIndexPath #2");
             SelStartPointViewController *selStartDestViewController = [[SelStartPointViewController alloc] init];
-            AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
             [appDelegate.revealController showViewController:appDelegate.revealController.frontViewController animated:YES completion:^(BOOL finished) {
               [appDelegate.appNavController pushViewController:selStartDestViewController animated:YES];
             }];
-        }
             break;
+        }
         default:
             break;
     }

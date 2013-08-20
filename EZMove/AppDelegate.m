@@ -22,17 +22,16 @@
     [GMSServices provideAPIKey:@"AIzaSyD3myOe2BRIHkxTWwQoxSWHOLrIXWWYhOM"];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    // Step 1: Create your controllers.
+    // Create your controllers.
     MapViewController *mapVC = [[MapViewController alloc] init];
     self.appNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
     MenuViewController *menuVC = [[MenuViewController alloc] init];
-    
     RouteInfoViewController *routeVC = [[RouteInfoViewController alloc] init];
     
-    // Step 3: Instantiate your PKRevealController.
+    // Instantiate your PKRevealController.
     self.revealController = [PKRevealController revealControllerWithFrontViewController:self.appNavController leftViewController:menuVC rightViewController:routeVC options:nil];
 
-    // Step 4: Set it as your root view controller.
+    // Set it as your root view controller.
     self.window.rootViewController = self.revealController;
     
     [self.window makeKeyAndVisible];

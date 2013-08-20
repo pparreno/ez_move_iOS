@@ -36,12 +36,47 @@
     //CLLocation *myLocation = mapView_.myLocation;
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:10.3178f
                                                             longitude:123.9050f
-                                                                 zoom:17];
+                                                                 zoom:15];
     mapView_ = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
     CLLocationCoordinate2D position = CLLocationCoordinate2DMake(10.3178f, 123.9050f);
-    GMSMarker *marker = [GMSMarker markerWithPosition:position];
-    marker.title = @"You are here";
-    marker.map = mapView_;
+    GMSMarker *curPosMarker = [GMSMarker markerWithPosition:position];
+    curPosMarker.title = @"You are here";
+    curPosMarker.map = mapView_;
+    
+    // Dummy values
+    CLLocationCoordinate2D place1 = CLLocationCoordinate2DMake(10.3250f, 123.9060f);
+    CLLocationCoordinate2D place2 = CLLocationCoordinate2DMake(10.3270f, 123.9027f);
+    CLLocationCoordinate2D place3 = CLLocationCoordinate2DMake(10.3300f, 123.9040f);
+    GMSMarker *marker1 = [GMSMarker markerWithPosition:place1];
+    marker1.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
+    marker1.map = mapView_;
+    GMSMarker *marker2 = [GMSMarker markerWithPosition:place2];
+    marker2.icon = [GMSMarker markerImageWithColor:[UIColor orangeColor]];
+    marker2.map = mapView_;
+    GMSMarker *marker3 = [GMSMarker markerWithPosition:place3];
+    marker3.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
+    marker3.map = mapView_;
+    GMSMutablePath *path1 = [GMSMutablePath path];
+    [path1 addCoordinate:position];
+    [path1 addCoordinate:place1];
+    GMSPolyline *polyline1 = [GMSPolyline polylineWithPath:path1];
+    polyline1.strokeColor = [UIColor greenColor];
+    polyline1.strokeWidth = 10;
+    polyline1.map = mapView_;
+    GMSMutablePath *path2 = [GMSMutablePath path];
+    [path2 addCoordinate:place1];
+    [path2 addCoordinate:place2];
+    GMSPolyline *polyline2 = [GMSPolyline polylineWithPath:path2];
+    polyline2.strokeColor = [UIColor orangeColor];
+    polyline2.strokeWidth = 10;
+    polyline2.map = mapView_;
+    GMSMutablePath *path3 = [GMSMutablePath path];
+    [path3 addCoordinate:place2];
+    [path3 addCoordinate:place3];
+    GMSPolyline *polyline3 = [GMSPolyline polylineWithPath:path3];
+    polyline3.strokeColor = [UIColor blueColor];
+    polyline3.strokeWidth = 10;
+    polyline3.map = mapView_;
     [self.view addSubview:mapView_];
 
     
@@ -50,18 +85,17 @@
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:40/255.0f green:48/255.0f blue:50/255.0f alpha:1.0f];
     
     // Initialize navbar buttons
-    UIImage *revealImagePortrait = [UIImage imageNamed:@"reveal_menu_icon_portrait"];
-    UIImage *revealImageLandscape = [UIImage imageNamed:@"reveal_menu_icon_landscape"];
+    UIImage *imgInfoRightIcon = [UIImage imageNamed:@"ic_info.png"];
+    UIImage *menuLeftIcon = [UIImage imageNamed:@"ic_menu.png"];
     
     if (self.navigationController.revealController.type & PKRevealControllerTypeLeft)
     {
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:revealImagePortrait landscapeImagePhone:revealImageLandscape style:UIBarButtonItemStylePlain target:self action:@selector(showLeftView:)];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:menuLeftIcon style:UIBarButtonItemStylePlain target:self action:@selector(showLeftView:)];
     }
     
     if (self.navigationController.revealController.type & PKRevealControllerTypeRight)
     {
-        UIImage *imgInfoRightIcon = [UIImage imageNamed:@"info.png"];
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:imgInfoRightIcon landscapeImagePhone:revealImageLandscape style:UIBarButtonItemStylePlain target:self action:@selector(showRightView:)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:imgInfoRightIcon style:UIBarButtonItemStylePlain target:self action:@selector(showRightView:)];
     }
 }
 
