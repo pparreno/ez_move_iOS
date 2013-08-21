@@ -17,6 +17,7 @@
 @implementation MapViewController{
     GMSMapView *mapView_;
 }
+@synthesize locationManager, currentLocation;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,15 +34,18 @@
     // Get current location
     mapView_.myLocationEnabled = YES;
     
-    //CLLocation *myLocation = mapView_.myLocation;
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:10.3178f
-                                                            longitude:123.9050f
-                                                                 zoom:15];
-    mapView_ = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
-    CLLocationCoordinate2D position = CLLocationCoordinate2DMake(10.3178f, 123.9050f);
-    GMSMarker *curPosMarker = [GMSMarker markerWithPosition:position];
-    curPosMarker.title = @"You are here";
-    curPosMarker.map = mapView_;
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    [locationManager startUpdatingLocation];
+    
+//    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:10.3178f
+//                                                            longitude:123.9050f
+//                                                                 zoom:15];
+//    mapView_ = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
+    CLLocationCoordinate2D curPosition = CLLocationCoordinate2DMake(10.3178f,123.9050f);
+//    GMSMarker *curPosMarker = [GMSMarker markerWithPosition:curPosition];
+//    curPosMarker.title = @"You are here";
+//    curPosMarker.map = mapView_;
     
     // Dummy values
     CLLocationCoordinate2D place1 = CLLocationCoordinate2DMake(10.3250f, 123.9060f);
@@ -57,7 +61,7 @@
     marker3.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
     marker3.map = mapView_;
     GMSMutablePath *path1 = [GMSMutablePath path];
-    [path1 addCoordinate:position];
+    [path1 addCoordinate:curPosition];
     [path1 addCoordinate:place1];
     GMSPolyline *polyline1 = [GMSPolyline polylineWithPath:path1];
     polyline1.strokeColor = [UIColor greenColor];
@@ -105,6 +109,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark PKRevealViewController
+
 - (void)showLeftView:(id)sender
 {
     if (self.navigationController.revealController.focusedController == self.navigationController.revealController.leftViewController)
@@ -126,6 +132,42 @@
     else
     {
         [self.navigationController.revealController showViewController:self.navigationController.revealController.rightViewController];
+    }
+}
+
+#pragma mark CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    self.currentLocation = newLocation;    
+    if(newLocation.horizontalAccuracy <= 100.0f) {
+        [locationManager stopUpdatingLocation];
+    }
+    // Plot current location
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:newLocation.coordinate.latitude
+                                                            longitude:newLocation.coordinate.longitude
+                                                                 zoom:15];
+    mapView_ = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
+    CLLocationCoordinate2D curPosition = CLLocationCoordinate2DMake(newLocation.coordinate.latitude,newLocation.coordinate.longitude);
+    GMSMarker *curPosMarker = [GMSMarker markerWithPosition:curPosition];
+    curPosMarker.title = @"You are here";
+    curPosMarker.map = mapView_;
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    if(error.code == kCLErrorDenied) {
+        [locationManager stopUpdatingLocation];
+    } else if(error.code == kCLErrorLocationUnknown) {
+        // retry
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error retrieving location"
+                                                        message:[error description]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
 }
 
