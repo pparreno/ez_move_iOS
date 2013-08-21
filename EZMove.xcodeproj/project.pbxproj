@@ -11,6 +11,7 @@
 		4C9B624817BF5CB5000E45EF /* SelStartDestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */; };
 		4C9B624B17BF61D4000E45EF /* btn-new-trip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624917BF61D4000E45EF /* btn-new-trip.png */; };
 		4C9B624C17BF61D4000E45EF /* btn-new-trip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624A17BF61D4000E45EF /* btn-new-trip@2x.png */; };
+		4C9F826E17C4ACFB00C4161E /* ayala_test.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4C9F826D17C4ACFB00C4161E /* ayala_test.gpx */; };
 		941302A217AFED1600F3F12D /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941302A117AFED1600F3F12D /* GoogleMaps.framework */; };
 		941302A417AFED4E00F3F12D /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 941302A317AFED4E00F3F12D /* GoogleMaps.bundle */; };
 		941302A617AFED7000F3F12D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941302A517AFED7000F3F12D /* AVFoundation.framework */; };
@@ -59,7 +60,6 @@
 		948DA79B17BD0E0100E6BBA0 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */; };
 		94FA690617C3C163009FC970 /* ic_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FA690417C3C163009FC970 /* ic_info.png */; };
 		94FA690717C3C163009FC970 /* ic_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FA690517C3C163009FC970 /* ic_menu.png */; };
-		94FA690D17C3CBCF009FC970 /* dummyLoc.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 94FA690C17C3CBCF009FC970 /* dummyLoc.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +78,7 @@
 		4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelStartDestViewController.xib; sourceTree = "<group>"; };
 		4C9B624917BF61D4000E45EF /* btn-new-trip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new-trip.png"; sourceTree = "<group>"; };
 		4C9B624A17BF61D4000E45EF /* btn-new-trip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new-trip@2x.png"; sourceTree = "<group>"; };
+		4C9F826D17C4ACFB00C4161E /* ayala_test.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ayala_test.gpx; sourceTree = "<group>"; };
 		941302A117AFED1600F3F12D /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		941302A317AFED4E00F3F12D /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		941302A517AFED7000F3F12D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -138,7 +139,6 @@
 		948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		94FA690417C3C163009FC970 /* ic_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info.png; sourceTree = "<group>"; };
 		94FA690517C3C163009FC970 /* ic_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu.png; sourceTree = "<group>"; };
-		94FA690C17C3CBCF009FC970 /* dummyLoc.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = dummyLoc.gpx; path = ../dummyLoc.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,7 +237,7 @@
 		942AE55717AE8C0000A65988 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				94FA690C17C3CBCF009FC970 /* dummyLoc.gpx */,
+				4C9F826D17C4ACFB00C4161E /* ayala_test.gpx */,
 				942AE55817AE8C0000A65988 /* EZMove-Info.plist */,
 				942AE55917AE8C0000A65988 /* InfoPlist.strings */,
 				942AE55C17AE8C0000A65988 /* main.m */,
@@ -431,7 +431,7 @@
 				942F12B517C2636F0098BF31 /* NewUserOptionViewController.xib in Resources */,
 				94FA690617C3C163009FC970 /* ic_info.png in Resources */,
 				94FA690717C3C163009FC970 /* ic_menu.png in Resources */,
-				94FA690D17C3CBCF009FC970 /* dummyLoc.gpx in Resources */,
+				4C9F826E17C4ACFB00C4161E /* ayala_test.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
