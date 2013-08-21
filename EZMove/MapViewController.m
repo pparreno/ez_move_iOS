@@ -38,10 +38,11 @@
     locationManager.delegate = self;
     [locationManager startUpdatingLocation];
     
-//    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:10.3178f
-//                                                            longitude:123.9050f
-//                                                                 zoom:15];
-//    mapView_ = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:10.3178f
+                                                            longitude:123.9050f
+                                                                 zoom:15];
+    mapView_ = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-45) camera:camera];
+    mapView_.myLocationEnabled = YES;
     CLLocationCoordinate2D curPosition = CLLocationCoordinate2DMake(10.3178f,123.9050f);
 //    GMSMarker *curPosMarker = [GMSMarker markerWithPosition:curPosition];
 //    curPosMarker.title = @"You are here";
@@ -101,6 +102,8 @@
     {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:imgInfoRightIcon style:UIBarButtonItemStylePlain target:self action:@selector(showRightView:)];
     }
+    
+    mapView_.settings.myLocationButton = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -152,6 +155,7 @@
     GMSMarker *curPosMarker = [GMSMarker markerWithPosition:curPosition];
     curPosMarker.title = @"You are here";
     curPosMarker.map = mapView_;
+    
     
 }
 
