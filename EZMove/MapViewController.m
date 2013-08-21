@@ -31,57 +31,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Get current location
-    mapView_.myLocationEnabled = YES;
+    // Initialize map
+    mapView_ = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-45) camera:nil];
     
+    // Get Current Location
+    mapView_.myLocationEnabled = YES;
+    mapView_.settings.myLocationButton = YES;
     locationManager = [[CLLocationManager alloc] init];
-    locationManager.delegate = self;
     [locationManager startUpdatingLocation];
-    
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:10.3178f
-                                                            longitude:123.9050f
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:locationManager.location.coordinate.latitude
+                                                            longitude:locationManager.location.coordinate.longitude
                                                                  zoom:15];
-    mapView_ = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-45) camera:camera];
-    mapView_.myLocationEnabled = YES;
-    CLLocationCoordinate2D curPosition = CLLocationCoordinate2DMake(10.3178f,123.9050f);
-//    GMSMarker *curPosMarker = [GMSMarker markerWithPosition:curPosition];
-//    curPosMarker.title = @"You are here";
-//    curPosMarker.map = mapView_;
+    [mapView_ animateToCameraPosition:camera];
+    CLLocationCoordinate2D curPosition = CLLocationCoordinate2DMake(locationManager.location.coordinate.latitude,locationManager.location.coordinate.longitude);
+
     
     // Dummy values
-    CLLocationCoordinate2D place1 = CLLocationCoordinate2DMake(10.3250f, 123.9060f);
-    CLLocationCoordinate2D place2 = CLLocationCoordinate2DMake(10.3270f, 123.9027f);
-    CLLocationCoordinate2D place3 = CLLocationCoordinate2DMake(10.3300f, 123.9040f);
-    GMSMarker *marker1 = [GMSMarker markerWithPosition:place1];
-    marker1.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
-    marker1.map = mapView_;
-    GMSMarker *marker2 = [GMSMarker markerWithPosition:place2];
-    marker2.icon = [GMSMarker markerImageWithColor:[UIColor orangeColor]];
-    marker2.map = mapView_;
-    GMSMarker *marker3 = [GMSMarker markerWithPosition:place3];
-    marker3.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
-    marker3.map = mapView_;
-    GMSMutablePath *path1 = [GMSMutablePath path];
-    [path1 addCoordinate:curPosition];
-    [path1 addCoordinate:place1];
-    GMSPolyline *polyline1 = [GMSPolyline polylineWithPath:path1];
-    polyline1.strokeColor = [UIColor greenColor];
-    polyline1.strokeWidth = 10;
-    polyline1.map = mapView_;
-    GMSMutablePath *path2 = [GMSMutablePath path];
-    [path2 addCoordinate:place1];
-    [path2 addCoordinate:place2];
-    GMSPolyline *polyline2 = [GMSPolyline polylineWithPath:path2];
-    polyline2.strokeColor = [UIColor orangeColor];
-    polyline2.strokeWidth = 10;
-    polyline2.map = mapView_;
-    GMSMutablePath *path3 = [GMSMutablePath path];
-    [path3 addCoordinate:place2];
-    [path3 addCoordinate:place3];
-    GMSPolyline *polyline3 = [GMSPolyline polylineWithPath:path3];
-    polyline3.strokeColor = [UIColor blueColor];
-    polyline3.strokeWidth = 10;
-    polyline3.map = mapView_;
+    CLLocationCoordinate2D destination = CLLocationCoordinate2DMake(10.3297f, 123.9072f);
+    GMSMarker *desMarker = [GMSMarker markerWithPosition:destination];
+    desMarker.icon = [GMSMarker markerImageWithColor:[UIColor redColor]];
+    desMarker.map = mapView_;
+    GMSMutablePath *path = [GMSMutablePath path];
+    [path addCoordinate:curPosition];
+    [path addCoordinate:destination];
+    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+    polyline.strokeColor = [UIColor redColor];
+    polyline.strokeWidth = 10;
+    polyline.map = mapView_;
     [self.view addSubview:mapView_];
 
     
@@ -103,7 +79,6 @@
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:imgInfoRightIcon style:UIBarButtonItemStylePlain target:self action:@selector(showRightView:)];
     }
     
-    mapView_.settings.myLocationButton = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -142,21 +117,11 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
+    NSLog(@"latitude: %f longitude: %f",newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     self.currentLocation = newLocation;    
     if(newLocation.horizontalAccuracy <= 100.0f) {
         [locationManager stopUpdatingLocation];
     }
-    // Plot current location
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:newLocation.coordinate.latitude
-                                                            longitude:newLocation.coordinate.longitude
-                                                                 zoom:15];
-    mapView_ = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
-    CLLocationCoordinate2D curPosition = CLLocationCoordinate2DMake(newLocation.coordinate.latitude,newLocation.coordinate.longitude);
-    GMSMarker *curPosMarker = [GMSMarker markerWithPosition:curPosition];
-    curPosMarker.title = @"You are here";
-    curPosMarker.map = mapView_;
-    
-    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
