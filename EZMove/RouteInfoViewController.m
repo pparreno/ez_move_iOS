@@ -7,13 +7,17 @@
 //
 
 #import "RouteInfoViewController.h"
+#import "RouteInfoTableCell.h"
 
 @interface RouteInfoViewController ()
 
 @end
 
 @implementation RouteInfoViewController{
-    NSArray *routePoints;
+    NSArray *routePlaces;
+    NSArray *routeInstructions;
+    NSArray *routeFares;
+    NSArray *routeIcons;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,7 +33,10 @@
 {
     [super viewDidLoad];
     // Initialization
-    routePoints = [NSArray arrayWithObjects:@"Cebu City Hall",@"Stop near Julie's Bakeshop",@"Stop in front of SOGO Hotel",@"Carbon Market", nil];
+    routePlaces = [NSArray arrayWithObjects:@"Cebu City Hall",@"Stop near Julie's Bakeshop",@"Stop in front of SOGO Hotel",@"Carbon Market", nil];
+    routeInstructions = [NSArray arrayWithObjects:@"Ride 13C jeepney to next point.",@"Cross the road and ride 12L to next point.",@"Cross the road and walk to next point to reach Carbon Market",@"", nil];
+    routeFares = [NSArray arrayWithObjects:@"Fare: P12.00",@"Fare: P8.00",@"Fare: P8.00",@"", nil];
+    routeIcons = [NSArray arrayWithObjects: [UIImage imageNamed:@"ic_start.png"], [UIImage imageNamed:@"ic_node.png"], [UIImage imageNamed:@"ic_node.png"], [UIImage imageNamed:@"ic_end.png"],nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,29 +45,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-// Table View Methods
+#pragma mark UITableViewDatasource 
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [routePoints count];
+    return [routePlaces count];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *tripStopsIdentifier = @"TripStop";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tripStopsIdentifier];
+    static NSString *tripStopsIdentifier = @"RouteInfoTableCell";
+    RouteInfoTableCell *cell = (RouteInfoTableCell*)[tableView dequeueReusableCellWithIdentifier:tripStopsIdentifier];
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tripStopsIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RouteInfoTableCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+        UIView *v = [[UIView alloc] init];
+    	v.backgroundColor = [UIColor orangeColor];
+        cell.selectedBackgroundView = v;
     }
-    cell.textLabel.text = [routePoints objectAtIndex:indexPath.row];
-    [cell.textLabel setTextColor:[UIColor whiteColor]];
-    [cell.textLabel setFont:[UIFont fontWithName:@"Verdana" size:18.0]];
+    cell.lbPlace.text = [routePlaces objectAtIndex:indexPath.row];
+    cell.lbPlace.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.lbPlace.numberOfLines = 2;
+    [cell.lbPlace sizeToFit];
+    cell.lbInstruction.text = [routeInstructions objectAtIndex:indexPath.row];
+    cell.lbInstruction.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.lbInstruction.numberOfLines = 2;
+    [cell.lbInstruction sizeToFit];
+    cell.lbFare.text = [routeFares objectAtIndex:indexPath.row];
+    cell.imgThumbnail.image = [routeIcons objectAtIndex:indexPath.row];
     return cell;
 }
 
 -(UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     UIView *viewFooter = [[UIView alloc] initWithFrame:CGRectMake(0 ,0 , 0, 0)];
     return viewFooter;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 125;
 }
 
 @end
