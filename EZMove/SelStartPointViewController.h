@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface SelStartPointViewController : UIViewController
+@interface SelStartPointViewController : UIViewController <CLLocationManagerDelegate>
 
 
 @property (nonatomic, strong) IBOutlet UIButton* someButton;
+@property (nonatomic, strong) IBOutlet UIView *viewBg;
+@property (nonatomic, strong) IBOutlet UIButton *btnBack;
+@property (nonatomic, strong) IBOutlet UIButton *btnNext;
+@property (nonatomic, strong) IBOutlet UILabel *lbStartingPoint;
+@property (nonatomic, retain) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *currentLocation;
+
 
 @end

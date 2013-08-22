@@ -17,6 +17,8 @@
 @implementation SelStartPointViewController{
     GMSMapView *mapView_;
 }
+@synthesize locationManager, currentLocation;
+@synthesize btnBack, btnNext, lbStartingPoint, viewBg;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,25 +32,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Get current location
+    // Initialize map
+    mapView_ = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) camera:nil];
+    
+    // Get Current Location
     mapView_.myLocationEnabled = YES;
-    
-    //CLLocation *myLocation = mapView_.myLocation;
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:10.3178f
-                                                            longitude:123.9050f
-                                                                 zoom:17];
-    mapView_ = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
-    CLLocationCoordinate2D position = CLLocationCoordinate2DMake(10.3178f, 123.9050f);
-    GMSMarker *marker = [GMSMarker markerWithPosition:position];
-    marker.title = @"You are here";
-    marker.map = mapView_;
-//    [self.view addSubview:mapView_];
+    mapView_.settings.myLocationButton = YES;
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager startUpdatingLocation];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:locationManager.location.coordinate.latitude
+                                                            longitude:locationManager.location.coordinate.longitude
+                                                                 zoom:15];
+    [mapView_ animateToCameraPosition:camera];
+    //    CLLocationCoordinate2D curPosition = CLLocationCoordinate2DMake(locationManager.location.coordinate.latitude,locationManager.location.coordinate.longitude);
     [self.view insertSubview:mapView_ belowSubview:self.someButton];
+
     
-    
-    // Initialize navigation bar
-    self.title = @"New Trip";
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:40/255.0f green:48/255.0f blue:50/255.0f alpha:1.0f];
+    // Initialize layout
+    [[self navigationController] setNavigationBarHidden:YES];
+    [self.view addSubview:viewBg];
+    [self.view addSubview:btnBack];
+    [self.view addSubview:lbStartingPoint];
+    [self.view addSubview:btnNext];
+
     
     // Show Modal Option
     NewUserOptionViewController *modalOptionVC = [[NewUserOptionViewController alloc]init];
