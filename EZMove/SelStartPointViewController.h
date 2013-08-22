@@ -10,4 +10,7 @@
 
 @interface SelStartPointViewController : UIViewController
 
+
+@property (nonatomic, strong) IBOutlet UIButton* someButton;
+
 @end

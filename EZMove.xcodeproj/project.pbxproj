@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C9B624717BF5CB5000E45EF /* SelStartPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */; };
-		4C9B624817BF5CB5000E45EF /* SelStartDestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */; };
+		4C9B624817BF5CB5000E45EF /* SelStartPointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624617BF5CB5000E45EF /* SelStartPointViewController.xib */; };
 		4C9B624B17BF61D4000E45EF /* btn-new-trip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624917BF61D4000E45EF /* btn-new-trip.png */; };
 		4C9B624C17BF61D4000E45EF /* btn-new-trip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624A17BF61D4000E45EF /* btn-new-trip@2x.png */; };
 		4C9F826E17C4ACFB00C4161E /* ayala_test.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4C9F826D17C4ACFB00C4161E /* ayala_test.gpx */; };
@@ -80,7 +80,7 @@
 /* Begin PBXFileReference section */
 		4C9B624417BF5CB5000E45EF /* SelStartPointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelStartPointViewController.h; sourceTree = "<group>"; };
 		4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelStartPointViewController.m; sourceTree = "<group>"; };
-		4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelStartDestViewController.xib; sourceTree = "<group>"; };
+		4C9B624617BF5CB5000E45EF /* SelStartPointViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelStartPointViewController.xib; sourceTree = "<group>"; };
 		4C9B624917BF61D4000E45EF /* btn-new-trip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new-trip.png"; sourceTree = "<group>"; };
 		4C9B624A17BF61D4000E45EF /* btn-new-trip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-new-trip@2x.png"; sourceTree = "<group>"; };
 		4C9F826D17C4ACFB00C4161E /* ayala_test.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ayala_test.gpx; sourceTree = "<group>"; };
@@ -307,7 +307,7 @@
 			children = (
 				4C9B624417BF5CB5000E45EF /* SelStartPointViewController.h */,
 				4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */,
-				4C9B624617BF5CB5000E45EF /* SelStartDestViewController.xib */,
+				4C9B624617BF5CB5000E45EF /* SelStartPointViewController.xib */,
 				942F12B117C2636F0098BF31 /* NewUserOptionViewController.h */,
 				942F12B217C2636F0098BF31 /* NewUserOptionViewController.m */,
 				942F12B317C2636F0098BF31 /* NewUserOptionViewController.xib */,
@@ -442,7 +442,7 @@
 				945D76A517BE72A300EDE5E9 /* btn-route.png in Resources */,
 				945D76A717BE72A300EDE5E9 /* btn-help.png in Resources */,
 				945D76AC17BE873B00EDE5E9 /* RouteInfoViewController.xib in Resources */,
-				4C9B624817BF5CB5000E45EF /* SelStartDestViewController.xib in Resources */,
+				4C9B624817BF5CB5000E45EF /* SelStartPointViewController.xib in Resources */,
 				4C9B624B17BF61D4000E45EF /* btn-new-trip.png in Resources */,
 				4C9B624C17BF61D4000E45EF /* btn-new-trip@2x.png in Resources */,
 				942F12B517C2636F0098BF31 /* NewUserOptionViewController.xib in Resources */,

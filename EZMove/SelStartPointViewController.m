@@ -42,7 +42,8 @@
     GMSMarker *marker = [GMSMarker markerWithPosition:position];
     marker.title = @"You are here";
     marker.map = mapView_;
-    [self.view addSubview:mapView_];
+//    [self.view addSubview:mapView_];
+    [self.view insertSubview:mapView_ belowSubview:self.someButton];
     
     
     // Initialize navigation bar
