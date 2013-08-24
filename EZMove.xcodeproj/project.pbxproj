@@ -17,6 +17,10 @@
 		4C48AB0817C8881B00B56207 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AAFE17C8881B00B56207 /* ASIInputStream.m */; };
 		4C48AB0917C8881B00B56207 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB0017C8881B00B56207 /* ASINetworkQueue.m */; };
 		4C48AB0C17C8882B00B56207 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB0B17C8882B00B56207 /* Reachability.m */; };
+		4C48AB1017C88E0200B56207 /* EZRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB0F17C88E0200B56207 /* EZRoute.m */; };
+		4C48AB1317C88E8800B56207 /* EZLeg.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB1217C88E8800B56207 /* EZLeg.m */; };
+		4C48AB1517C89C5C00B56207 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C48AB1417C89C5B00B56207 /* CFNetwork.framework */; };
+		4C48AB1717C89C6F00B56207 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C48AB1617C89C6F00B56207 /* MobileCoreServices.framework */; };
 		4C9B624717BF5CB5000E45EF /* SelStartPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */; };
 		4C9B624817BF5CB5000E45EF /* SelStartPointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624617BF5CB5000E45EF /* SelStartPointViewController.xib */; };
 		4C9B624B17BF61D4000E45EF /* btn-new-trip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624917BF61D4000E45EF /* btn-new-trip.png */; };
@@ -113,6 +117,12 @@
 		4C48AB0117C8881B00B56207 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		4C48AB0A17C8882B00B56207 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4C48AB0B17C8882B00B56207 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		4C48AB0E17C88E0200B56207 /* EZRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZRoute.h; sourceTree = "<group>"; };
+		4C48AB0F17C88E0200B56207 /* EZRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZRoute.m; sourceTree = "<group>"; };
+		4C48AB1117C88E8800B56207 /* EZLeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZLeg.h; sourceTree = "<group>"; };
+		4C48AB1217C88E8800B56207 /* EZLeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZLeg.m; sourceTree = "<group>"; };
+		4C48AB1417C89C5B00B56207 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4C48AB1617C89C6F00B56207 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4C9B624417BF5CB5000E45EF /* SelStartPointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelStartPointViewController.h; sourceTree = "<group>"; };
 		4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelStartPointViewController.m; sourceTree = "<group>"; };
 		4C9B624617BF5CB5000E45EF /* SelStartPointViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelStartPointViewController.xib; sourceTree = "<group>"; };
@@ -194,12 +204,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941302B617AFEDC300F3F12D /* libz.dylib in Frameworks */,
+				942AE55517AE8C0000A65988 /* CoreGraphics.framework in Frameworks */,
+				4C48AB1717C89C6F00B56207 /* MobileCoreServices.framework in Frameworks */,
+				941302BA17AFEDD500F3F12D /* SystemConfiguration.framework in Frameworks */,
+				4C48AB1517C89C5C00B56207 /* CFNetwork.framework in Frameworks */,
 				4C48AAE917C882B400B56207 /* libxml2.dylib in Frameworks */,
 				941302AA17AFED8000F3F12D /* CoreLocation.framework in Frameworks */,
 				941302BC17AFF19000F3F12D /* QuartzCore.framework in Frameworks */,
-				941302BA17AFEDD500F3F12D /* SystemConfiguration.framework in Frameworks */,
 				941302B817AFEDCD00F3F12D /* OpenGLES.framework in Frameworks */,
-				941302B617AFEDC300F3F12D /* libz.dylib in Frameworks */,
 				941302B417AFEDBA00F3F12D /* libicucore.dylib in Frameworks */,
 				941302B217AFEDAC00F3F12D /* libc++.dylib in Frameworks */,
 				941302B017AFED9900F3F12D /* ImageIO.framework in Frameworks */,
@@ -209,7 +222,6 @@
 				941302A617AFED7000F3F12D /* AVFoundation.framework in Frameworks */,
 				942AE55117AE8C0000A65988 /* UIKit.framework in Frameworks */,
 				942AE55317AE8C0000A65988 /* Foundation.framework in Frameworks */,
-				942AE55517AE8C0000A65988 /* CoreGraphics.framework in Frameworks */,
 				941302A217AFED1600F3F12D /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,9 +276,29 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		4C48AB0D17C88DCF00B56207 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C48AB0E17C88E0200B56207 /* EZRoute.h */,
+				4C48AB0F17C88E0200B56207 /* EZRoute.m */,
+				4C48AB1117C88E8800B56207 /* EZLeg.h */,
+				4C48AB1217C88E8800B56207 /* EZLeg.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4C48AB1817C89CA000B56207 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
 		942AE54417AE8C0000A65988 = {
 			isa = PBXGroup;
 			children = (
+				4C48AB1617C89C6F00B56207 /* MobileCoreServices.framework */,
+				4C48AB1417C89C5B00B56207 /* CFNetwork.framework */,
 				4C48AAE817C882B300B56207 /* libxml2.dylib */,
 				942AE55617AE8C0000A65988 /* EZMove */,
 				942AE57417AE8C0000A65988 /* EZMoveTests */,
@@ -312,6 +344,8 @@
 		942AE55617AE8C0000A65988 /* EZMove */ = {
 			isa = PBXGroup;
 			children = (
+				4C48AB1817C89CA000B56207 /* Requests */,
+				4C48AB0D17C88DCF00B56207 /* Models */,
 				942F12AF17C261FF0098BF31 /* Home */,
 				942F12B017C262260098BF31 /* New Trip */,
 				9489CE2017BE663D004DC00F /* Images */,
@@ -579,6 +613,8 @@
 				4C9B624717BF5CB5000E45EF /* SelStartPointViewController.m in Sources */,
 				942F12B417C2636F0098BF31 /* NewUserOptionViewController.m in Sources */,
 				9469B99417C4F2A4001E52DC /* RouteInfoTableCell.m in Sources */,
+				4C48AB1017C88E0200B56207 /* EZRoute.m in Sources */,
+				4C48AB1317C88E8800B56207 /* EZLeg.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
