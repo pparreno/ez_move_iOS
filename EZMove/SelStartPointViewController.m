@@ -11,17 +11,22 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "EZWSForGMSPolylineInfo.h"
 #import "MBProgressHUD.h"
+#import "EZRoute.h"
 
 @interface SelStartPointViewController ()
+
+@property (nonatomic, retain) GMSMapView *mapView;
 
 @end
 
 @implementation SelStartPointViewController{
-    GMSMapView *mapView_;
+  
+    
 }
 
 @synthesize locationManager, currentLocation;
 @synthesize someButton;
+@synthesize mapView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,18 +44,18 @@
     
     self.title = NSLocalizedString(@"New Trip", @"New Trip");
     // Initialize map
-    mapView_ = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) camera:nil];
+    self.mapView = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) camera:nil];
     
     // Get Current Location
-    mapView_.myLocationEnabled = YES;
-    mapView_.settings.myLocationButton = YES;
+    self.mapView.myLocationEnabled = YES;
+    self.mapView.settings.myLocationButton = YES;
     locationManager = [[CLLocationManager alloc] init];
     [locationManager startUpdatingLocation];
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:locationManager.location.coordinate.latitude
                                                             longitude:locationManager.location.coordinate.longitude
                                                                  zoom:15];
-    [mapView_ animateToCameraPosition:camera];
-    [self.view insertSubview:mapView_ belowSubview:self.someButton];
+    [self.mapView animateToCameraPosition:camera];
+    [self.view insertSubview:self.mapView belowSubview:self.someButton];
 
     
     // Initialize layout
@@ -76,8 +81,17 @@
         NSData *responseData = [polyLineWS.request responseData];
         NSError *error;
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-        NSDictionary *routeDictionary = [dictionary objectForKey:@"routes"];
-        NSLog(@"ROUTES: %@", routeDictionary);
+        NSArray *routeArray = [dictionary objectForKey:@"routes"];
+        NSDictionary *routeItem = [routeArray objectAtIndex:0];
+        NSDictionary *overviewPolylineDictionary = [routeItem objectForKey:@"overview_polyline"];
+        NSString *encodedPolyline = [overviewPolylineDictionary valueForKey:@"points"];
+        
+        GMSPolyline *polyLine = [EZRoute generatePolylineWithEncodedString:encodedPolyline];
+        polyLine.strokeWidth = 7.5f;
+        polyLine.map = self.mapView;
+        
+        NSLog(@"ROUTES: %@", encodedPolyline);
+        NSLog(@"POLYLINE: %@", polyLine);
         [progress hide:YES];
     }];
     
