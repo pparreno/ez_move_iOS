@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) IBOutlet UIButton *btnManual;
 @property (nonatomic, strong) IBOutlet UIButton *btnAutomatic;
+@property (nonatomic, strong) IBOutlet UIView *contentView;
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
 
 - (IBAction)onManualSelected:(id)sender;
 - (IBAction)onAutomaticSelected:(id)sender;

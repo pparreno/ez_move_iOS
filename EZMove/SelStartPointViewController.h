@@ -13,10 +13,6 @@
 
 
 @property (nonatomic, strong) IBOutlet UIButton* someButton;
-@property (nonatomic, strong) IBOutlet UIView *viewBg;
-@property (nonatomic, strong) IBOutlet UIButton *btnBack;
-@property (nonatomic, strong) IBOutlet UIButton *btnNext;
-@property (nonatomic, strong) IBOutlet UILabel *lbStartingPoint;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *currentLocation;
 

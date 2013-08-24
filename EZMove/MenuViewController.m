@@ -98,9 +98,9 @@
         case 2:
         {
             NSLog(@"didSelectRowAtIndexPath #2");
-            SelStartPointViewController *selStartDestViewController = [[SelStartPointViewController alloc] init];
+            SelStartPointViewController *selStartPointViewController = [[SelStartPointViewController alloc] init];
             [appDelegate.revealController showViewController:appDelegate.revealController.frontViewController animated:YES completion:^(BOOL finished) {
-              [appDelegate.appNavController pushViewController:selStartDestViewController animated:YES];
+              [appDelegate.appNavController pushViewController:selStartPointViewController animated:YES];
             }];
             break;
         }

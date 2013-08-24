@@ -17,8 +17,9 @@
 @implementation SelStartPointViewController{
     GMSMapView *mapView_;
 }
+
 @synthesize locationManager, currentLocation;
-@synthesize btnBack, btnNext, lbStartingPoint, viewBg;
+@synthesize someButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +33,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    self.title = NSLocalizedString(@"New Trip", @"New Trip");
     // Initialize map
     mapView_ = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) camera:nil];
     
@@ -44,19 +48,11 @@
                                                             longitude:locationManager.location.coordinate.longitude
                                                                  zoom:15];
     [mapView_ animateToCameraPosition:camera];
-    //    CLLocationCoordinate2D curPosition = CLLocationCoordinate2DMake(locationManager.location.coordinate.latitude,locationManager.location.coordinate.longitude);
     [self.view insertSubview:mapView_ belowSubview:self.someButton];
 
     
     // Initialize layout
-    [[self navigationController] setNavigationBarHidden:YES];
-    [self.view addSubview:viewBg];
-    [self.view addSubview:btnBack];
-    [self.view addSubview:lbStartingPoint];
-    [self.view addSubview:btnNext];
 
-    
-    // Show Modal Option
     NewUserOptionViewController *modalOptionVC = [[NewUserOptionViewController alloc]init];
     [self presentViewController:modalOptionVC animated:YES completion:nil];
 }

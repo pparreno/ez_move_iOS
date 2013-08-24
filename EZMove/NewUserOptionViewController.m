@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.scrollView addSubview:self.contentView];
+    [self.scrollView setContentSize:self.scrollView.frame.size];
 }
 
 - (void)didReceiveMemoryWarning
