@@ -9,6 +9,8 @@
 #import "SelStartPointViewController.h"
 #import "NewUserOptionViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "EZWSForGMSPolylineInfo.h"
+#import "MBProgressHUD.h"
 
 @interface SelStartPointViewController ()
 
@@ -61,6 +63,35 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+    EZWSForGMSPolylineInfo *polyLineWS = [[EZWSForGMSPolylineInfo alloc] initWithURL:nil];
+    [polyLineWS.request setCompletionBlock:^{
+        NSData *responseData = [polyLineWS.request responseData];
+        NSError *error;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        NSDictionary *routeDictionary = [dictionary objectForKey:@"routes"];
+        NSLog(@"ROUTES: %@", routeDictionary);
+        [progress hide:YES];
+    }];
+    
+    [polyLineWS.request setFailedBlock:^{
+        NSError *error = [polyLineWS.request error];
+        NSLog(@"FAILURE DESCRIPTION %@", [error localizedDescription]);
+        NSLog(@"FAILURE REASON %@", [error localizedFailureReason]);
+        [progress hide:YES];
+    }];
+    
+    [polyLineWS.request startAsynchronous];
+    [progress show:YES];
+
+    
 }
 
 @end

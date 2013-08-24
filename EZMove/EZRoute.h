@@ -13,8 +13,6 @@
 
 @property (nonatomic, strong) NSMutableArray *legsArray;
 
-
-
-- (void) drawPolylineWithEncodedString: (NSString *) encodedString onGMSMapView: (GMSMapView *) mapView;
+- (GMSPolyline *) generatePolylineWithEncodedString: (NSString *) encodedString;
 
 @end

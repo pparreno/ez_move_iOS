@@ -10,9 +10,11 @@
 
 @implementation EZRoute
 
--(void)drawPolylineWithEncodedString:(NSString *)encodedString onGMSMapView:(GMSMapView *)mapView
+- (GMSPolyline *)generatePolylineWithEncodedString:(NSString *)encodedString
 {
     GMSMutablePath *mutablePath = [GMSMutablePath pathFromEncodedPath:encodedString];
+    GMSPolyline *polyLine = [GMSPolyline polylineWithPath:mutablePath];
+    return polyLine;
 }
 
 @end

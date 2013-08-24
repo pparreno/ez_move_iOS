@@ -21,6 +21,19 @@
 		4C48AB1317C88E8800B56207 /* EZLeg.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB1217C88E8800B56207 /* EZLeg.m */; };
 		4C48AB1517C89C5C00B56207 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C48AB1417C89C5B00B56207 /* CFNetwork.framework */; };
 		4C48AB1717C89C6F00B56207 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C48AB1617C89C6F00B56207 /* MobileCoreServices.framework */; };
+		4C48AB1B17C8A36000B56207 /* EZWebServiceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB1A17C8A36000B56207 /* EZWebServiceRequest.m */; };
+		4C48AB1E17C8A40200B56207 /* EZWSForGMSPolylineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB1D17C8A40200B56207 /* EZWSForGMSPolylineInfo.m */; };
+		4C48AB2217C8C56400B56207 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB2117C8C56400B56207 /* MBProgressHUD.m */; };
+		4C48AB2417C8C9DF00B56207 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB0B17C8882B00B56207 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C48AB2617C8C9DF00B56207 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AAEF17C8881B00B56207 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C48AB2917C8C9DF00B56207 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AAF217C8881B00B56207 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C48AB2B17C8C9DF00B56207 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AAF417C8881B00B56207 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C48AB2D17C8C9DF00B56207 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AAF617C8881B00B56207 /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C48AB2F17C8C9DF00B56207 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AAF817C8881B00B56207 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C48AB3117C8C9DF00B56207 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AAFA17C8881B00B56207 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C48AB3517C8C9DF00B56207 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AAFE17C8881B00B56207 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C48AB3717C8C9DF00B56207 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB0017C8881B00B56207 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C48AB3917C8CAE600B56207 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C48AB2117C8C56400B56207 /* MBProgressHUD.m */; };
 		4C9B624717BF5CB5000E45EF /* SelStartPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */; };
 		4C9B624817BF5CB5000E45EF /* SelStartPointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624617BF5CB5000E45EF /* SelStartPointViewController.xib */; };
 		4C9B624B17BF61D4000E45EF /* btn-new-trip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B624917BF61D4000E45EF /* btn-new-trip.png */; };
@@ -123,6 +136,12 @@
 		4C48AB1217C88E8800B56207 /* EZLeg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZLeg.m; sourceTree = "<group>"; };
 		4C48AB1417C89C5B00B56207 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4C48AB1617C89C6F00B56207 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4C48AB1917C8A36000B56207 /* EZWebServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZWebServiceRequest.h; sourceTree = "<group>"; };
+		4C48AB1A17C8A36000B56207 /* EZWebServiceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZWebServiceRequest.m; sourceTree = "<group>"; };
+		4C48AB1C17C8A40200B56207 /* EZWSForGMSPolylineInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZWSForGMSPolylineInfo.h; sourceTree = "<group>"; };
+		4C48AB1D17C8A40200B56207 /* EZWSForGMSPolylineInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZWSForGMSPolylineInfo.m; sourceTree = "<group>"; };
+		4C48AB2017C8C56400B56207 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		4C48AB2117C8C56400B56207 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		4C9B624417BF5CB5000E45EF /* SelStartPointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelStartPointViewController.h; sourceTree = "<group>"; };
 		4C9B624517BF5CB5000E45EF /* SelStartPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelStartPointViewController.m; sourceTree = "<group>"; };
 		4C9B624617BF5CB5000E45EF /* SelStartPointViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelStartPointViewController.xib; sourceTree = "<group>"; };
@@ -290,8 +309,21 @@
 		4C48AB1817C89CA000B56207 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				4C48AB1917C8A36000B56207 /* EZWebServiceRequest.h */,
+				4C48AB1A17C8A36000B56207 /* EZWebServiceRequest.m */,
+				4C48AB1C17C8A40200B56207 /* EZWSForGMSPolylineInfo.h */,
+				4C48AB1D17C8A40200B56207 /* EZWSForGMSPolylineInfo.m */,
 			);
 			name = Requests;
+			sourceTree = "<group>";
+		};
+		4C48AB1F17C8C55100B56207 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				4C48AB2017C8C56400B56207 /* MBProgressHUD.h */,
+				4C48AB2117C8C56400B56207 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		942AE54417AE8C0000A65988 = {
@@ -428,6 +460,7 @@
 		947A8D8617BA725F0027AF51 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				4C48AB1F17C8C55100B56207 /* MBProgressHUD */,
 				4C48AA6A17C8613F00B56207 /* ASIHTTPRequest */,
 				947A8D8717BA73A50027AF51 /* PKRevealController */,
 			);
@@ -602,6 +635,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C48AB3917C8CAE600B56207 /* MBProgressHUD.m in Sources */,
+				4C48AB2417C8C9DF00B56207 /* Reachability.m in Sources */,
+				4C48AB2617C8C9DF00B56207 /* ASIAuthenticationDialog.m in Sources */,
+				4C48AB2917C8C9DF00B56207 /* ASIDataCompressor.m in Sources */,
+				4C48AB2B17C8C9DF00B56207 /* ASIDataDecompressor.m in Sources */,
+				4C48AB2D17C8C9DF00B56207 /* ASIDownloadCache.m in Sources */,
+				4C48AB2F17C8C9DF00B56207 /* ASIFormDataRequest.m in Sources */,
+				4C48AB3117C8C9DF00B56207 /* ASIHTTPRequest.m in Sources */,
+				4C48AB3517C8C9DF00B56207 /* ASIInputStream.m in Sources */,
+				4C48AB3717C8C9DF00B56207 /* ASINetworkQueue.m in Sources */,
 				942AE55D17AE8C0000A65988 /* main.m in Sources */,
 				942AE56117AE8C0000A65988 /* AppDelegate.m in Sources */,
 				942AE58A17AE95B100A65988 /* MapViewController.m in Sources */,
@@ -615,6 +658,8 @@
 				9469B99417C4F2A4001E52DC /* RouteInfoTableCell.m in Sources */,
 				4C48AB1017C88E0200B56207 /* EZRoute.m in Sources */,
 				4C48AB1317C88E8800B56207 /* EZLeg.m in Sources */,
+				4C48AB1B17C8A36000B56207 /* EZWebServiceRequest.m in Sources */,
+				4C48AB1E17C8A40200B56207 /* EZWSForGMSPolylineInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +677,7 @@
 				4C48AB0817C8881B00B56207 /* ASIInputStream.m in Sources */,
 				4C48AB0917C8881B00B56207 /* ASINetworkQueue.m in Sources */,
 				4C48AB0C17C8882B00B56207 /* Reachability.m in Sources */,
+				4C48AB2217C8C56400B56207 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
