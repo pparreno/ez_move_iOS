@@ -60,7 +60,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"RouteInfoTableCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
         UIView *v = [[UIView alloc] init];
-    	v.backgroundColor = [UIColor orangeColor];
+    	v.backgroundColor = [UIColor colorWithRed:0.11 green:0.643 blue:0.545 alpha:1]; /*#1ca48b*/
         cell.selectedBackgroundView = v;
     }
     cell.lbPlace.text = [routePlaces objectAtIndex:indexPath.row];

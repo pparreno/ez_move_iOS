@@ -63,7 +63,8 @@
     
     // Initialize navigation bar
     self.title = @"TRIP";
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:40/255.0f green:48/255.0f blue:50/255.0f alpha:1.0f];
+    //self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:40/255.0f green:48/255.0f blue:50/255.0f alpha:1.0f];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.227 green:0.31 blue:0.392 alpha:1]; /*#3a4f64*/
     
     // Initialize navbar buttons
     UIImage *imgInfoRightIcon = [UIImage imageNamed:@"ic_info.png"];

@@ -21,7 +21,6 @@
 }
 
 @synthesize locationManager, currentLocation;
-@synthesize someButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +35,6 @@
 {
     [super viewDidLoad];
     
-    
     self.title = NSLocalizedString(@"New Trip", @"New Trip");
     // Initialize map
     mapView_ = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) camera:nil];
@@ -48,15 +46,19 @@
     [locationManager startUpdatingLocation];
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:locationManager.location.coordinate.latitude
                                                             longitude:locationManager.location.coordinate.longitude
-                                                                 zoom:15];
+                                                                 zoom:16];
     [mapView_ animateToCameraPosition:camera];
-    [self.view insertSubview:mapView_ belowSubview:self.someButton];
+    [self.view addSubview:mapView_];
 
     
     // Initialize layout
-
     NewUserOptionViewController *modalOptionVC = [[NewUserOptionViewController alloc]init];
     [self presentViewController:modalOptionVC animated:YES completion:nil];
+    UIBarButtonItem *btnNext = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.rightBarButtonItem = btnNext;
+    
+    // Display possible starting points
+    [self markStartingPoints];
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,6 +94,28 @@
     [progress show:YES];
 
     
+}
+
+-(void)markStartingPoints
+{
+    CLLocationCoordinate2D startPos1 = CLLocationCoordinate2DMake(10.31700, 123.907825);
+    GMSMarker *marker1 = [GMSMarker markerWithPosition:startPos1];
+    marker1.map = mapView_;
+    [self mapView:mapView_ markerInfoWindow:marker1];
+    CLLocationCoordinate2D startPos2 = CLLocationCoordinate2DMake(10.31899, 123.907900);
+    GMSMarker *marker2 = [GMSMarker markerWithPosition:startPos2];
+    marker2.title = @"Hello World";
+    marker2.map = mapView_;
+}
+
+-(UIView *)mapView:(GMSMapView *) aMapView markerInfoWindow:(GMSMarker*) marker
+{
+    UIView *view = [[UIView alloc]init];
+    //customize the UIView, for example, in your case, add a UILabel as the subview of the view
+    UILabel *txt = [[UILabel alloc] init];
+    txt.text = @"HELLO!!!";
+    [view addSubview: txt];
+    return view;
 }
 
 @end

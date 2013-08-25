@@ -33,7 +33,7 @@
     [super viewDidLoad];
     // Initialize choices in menu
     menuItems = [NSArray arrayWithObjects:@"EZ-MOVE", @"Current Trip", @"New Trip", @"Saved Trips", @"Routes", @"Settings", @"Help",nil];
-    menuImages = [NSArray arrayWithObjects: [[UIImage alloc] init], [UIImage imageNamed:@"btn-current.png"], [UIImage imageNamed:@"btn-new-trip.png"], [UIImage imageNamed:@"btn-saved.png"], [UIImage imageNamed:@"btn-route.png"], [UIImage imageNamed:@"btn-settings.png"], [UIImage imageNamed:@"btn-help.png"],nil];
+    menuImages = [NSArray arrayWithObjects: [[UIImage alloc] init], [UIImage imageNamed:@"btn-current.png"], [UIImage imageNamed:@"btn-new.png"], [UIImage imageNamed:@"btn-saved.png"], [UIImage imageNamed:@"btn-route.png"], [UIImage imageNamed:@"btn-settings.png"], [UIImage imageNamed:@"btn-help.png"],nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,13 +63,14 @@
         [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
     } else {
         UIView *v = [[UIView alloc] init];
-    	v.backgroundColor = [UIColor orangeColor];
+    	v.backgroundColor = [UIColor colorWithRed:0.11 green:0.643 blue:0.545 alpha:1]; /*#1ca48b*/
     	cell.selectedBackgroundView = v;
         [cell.textLabel setFont:[UIFont fontWithName:@"Verdana" size:18.0]];
     }
     
     cell.textLabel.text = [menuItems objectAtIndex:indexPath.row];
     [cell.textLabel setTextColor:[UIColor whiteColor]];
+    cell.imageView.frame = CGRectMake(0, 0, 20, 20);
     cell.imageView.image = [menuImages objectAtIndex:indexPath.row];
     
    
@@ -109,6 +110,11 @@
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 55;
 }
 
 @end

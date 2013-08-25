@@ -11,8 +11,6 @@
 
 @interface SelStartPointViewController : UIViewController <CLLocationManagerDelegate>
 
-
-@property (nonatomic, strong) IBOutlet UIButton* someButton;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *currentLocation;
 
