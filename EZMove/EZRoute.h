@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) NSMutableArray *legsArray;
 
-- (GMSPolyline *) generatePolylineWithEncodedString: (NSString *) encodedString;
+
++(GMSPolyline *) generatePolylineWithEncodedString: (NSString *) encodedString;
 
 @end

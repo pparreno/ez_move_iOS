@@ -10,7 +10,7 @@
 
 @implementation EZRoute
 
-- (GMSPolyline *)generatePolylineWithEncodedString:(NSString *)encodedString
++ (GMSPolyline *)generatePolylineWithEncodedString:(NSString *)encodedString
 {
     GMSMutablePath *mutablePath = [GMSMutablePath pathFromEncodedPath:encodedString];
     GMSPolyline *polyLine = [GMSPolyline polylineWithPath:mutablePath];
