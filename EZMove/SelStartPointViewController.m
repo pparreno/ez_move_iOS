@@ -144,46 +144,28 @@
 {
     CLLocationCoordinate2D startPos1 = CLLocationCoordinate2DMake(10.31700, 123.907825);
     GMSMarker *marker1 = [GMSMarker markerWithPosition:startPos1];
+    [marker1 setAnimated:YES];
     marker1.map = mapView;
-    [self mapView:mapView markerInfoWindow:marker1];
+    
     CLLocationCoordinate2D startPos2 = CLLocationCoordinate2DMake(10.31899, 123.907900);
     GMSMarker *marker2 = [GMSMarker markerWithPosition:startPos2];
     marker2.title = @"Hello World";
+    [marker2 setAnimated:YES];
     marker2.map = mapView;
 }
 
 
-// Set-up pop up infor window
-- (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker*)marker
+-(BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
 {
-    UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 175, 80)];
-    customView.backgroundColor = [UIColor colorWithWhite:-1 alpha:0.5];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select An Action" delegate:self cancelButtonTitle:nil destructiveButtonTitle:@"Cancel" otherButtonTitles: @"Set as Starting Point", @"View Details", nil];
+    [actionSheet showInView:self.view];
     
-    UILabel *lbStartingPoint = [[UILabel alloc] init];
-    lbStartingPoint.text = @"Set as start point?";
-    lbStartingPoint.textColor = [UIColor whiteColor];
-    lbStartingPoint.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    [lbStartingPoint setFrame:CGRectMake(5, 3, 150, 35)];
-    
-    UIButton *btnSet = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btnSet setTitle:@"Set" forState:UIControlStateNormal];
-    [btnSet setFrame:CGRectMake(5, 40, 80, 35)];
-    [btnSet addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
-    [btnSet setBackgroundColor:[UIColor orangeColor]];
-    [btnSet setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    
-    UIButton *btnView = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btnView setTitle:@"View" forState:UIControlStateNormal];
-    [btnView setFrame:CGRectMake(90, 40, 80, 35)];
-    [btnView addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
-    [btnView setBackgroundColor:[UIColor orangeColor]];
-    [btnView setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    
-    [customView addSubview:lbStartingPoint];
-    [customView addSubview:btnSet];
-    [customView addSubview:btnView];
+    return YES;
+}
 
-    return customView;
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    //implement code here for selecting an ActionSheet item
 }
 
 @end

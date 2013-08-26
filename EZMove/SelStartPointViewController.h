@@ -10,7 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <GoogleMaps/GoogleMaps.h>
 
-@interface SelStartPointViewController : UIViewController <CLLocationManagerDelegate, GMSMapViewDelegate>
+@interface SelStartPointViewController : UIViewController <CLLocationManagerDelegate, GMSMapViewDelegate, UIActionSheetDelegate>
+//@interface SelStartPointViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *currentLocation;
