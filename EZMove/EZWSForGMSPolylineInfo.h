@@ -10,6 +10,9 @@
 
 @interface EZWSForGMSPolylineInfo : EZWebServiceRequest
 
-- (id)initWithURL: (NSURL *) url;
+- (id)initWithStringRequest: (NSString *) requestString;
+
+//for test purposes
+- (id)initWithURL: (NSURL *) url withIsInbound: (BOOL) isInBound;
 
 @end

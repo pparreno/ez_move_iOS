@@ -78,9 +78,37 @@
     
     MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
-    EZWSForGMSPolylineInfo *polyLineWS = [[EZWSForGMSPolylineInfo alloc] initWithURL:nil];
+    EZWSForGMSPolylineInfo *polyLineWS = [[EZWSForGMSPolylineInfo alloc] initWithURL:nil withIsInbound:NO];
     [polyLineWS.request setCompletionBlock:^{
         NSData *responseData = [polyLineWS.request responseData];
+        NSError *error;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+        NSArray *routeArray = [dictionary objectForKey:@"routes"];
+        NSDictionary *routeItem = [routeArray objectAtIndex:0];
+        NSDictionary *overviewPolylineDictionary = [routeItem objectForKey:@"overview_polyline"];
+        NSString *encodedPolyline = [overviewPolylineDictionary valueForKey:@"points"];
+        
+        GMSPolyline *polyLine = [EZRoute generatePolylineWithEncodedString:encodedPolyline];
+        polyLine.strokeWidth = 7.5f;
+        polyLine.strokeColor = [UIColor greenColor];
+        polyLine.map = self.mapView;
+        
+        NSLog(@"ROUTES: %@", encodedPolyline);
+        NSLog(@"POLYLINE: %@", polyLine);
+        [progress hide:YES];
+    }];
+    
+    [polyLineWS.request setFailedBlock:^{
+        NSError *error = [polyLineWS.request error];
+        NSLog(@"FAILURE DESCRIPTION %@", [error localizedDescription]);
+        NSLog(@"FAILURE REASON %@", [error localizedFailureReason]);
+        [progress hide:YES];
+    }];
+    
+    
+    EZWSForGMSPolylineInfo *polyLineWSInbound = [[EZWSForGMSPolylineInfo alloc] initWithURL:nil withIsInbound:YES];
+    [polyLineWSInbound.request setCompletionBlock:^{
+        NSData *responseData = [polyLineWSInbound.request responseData];
         NSError *error;
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
         NSArray *routeArray = [dictionary objectForKey:@"routes"];
@@ -97,14 +125,16 @@
         [progress hide:YES];
     }];
     
-    [polyLineWS.request setFailedBlock:^{
-        NSError *error = [polyLineWS.request error];
+    [polyLineWSInbound.request setFailedBlock:^{
+        NSError *error = [polyLineWSInbound.request error];
         NSLog(@"FAILURE DESCRIPTION %@", [error localizedDescription]);
         NSLog(@"FAILURE REASON %@", [error localizedFailureReason]);
         [progress hide:YES];
     }];
+
     
     [polyLineWS.request startAsynchronous];
+    [polyLineWSInbound.request startAsynchronous];
     [progress show:YES];
 
     
