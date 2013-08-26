@@ -42,7 +42,7 @@
     
     self.title = NSLocalizedString(@"New Trip", @"New Trip");
     // Initialize map
-    self.mapView = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) camera:nil];
+    self.mapView = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-45) camera:nil];
     
     // Get Current Location
     self.mapView.myLocationEnabled = YES;
@@ -54,6 +54,7 @@
                                                                  zoom:16];
     [mapView animateToCameraPosition:camera];
     [self.view addSubview:mapView];
+    self.mapView.delegate = self;
     
     // Initialize layout
     NewUserOptionViewController *modalOptionVC = [[NewUserOptionViewController alloc]init];
@@ -121,14 +122,38 @@
     marker2.map = mapView;
 }
 
--(UIView *)mapView:(GMSMapView *) aMapView markerInfoWindow:(GMSMarker*) marker
+
+// Set-up pop up infor window
+- (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker*)marker
 {
-    UIView *view = [[UIView alloc]init];
-    //customize the UIView, for example, in your case, add a UILabel as the subview of the view
-    UILabel *txt = [[UILabel alloc] init];
-    txt.text = @"HELLO!!!";
-    [view addSubview: txt];
-    return view;
+    UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 175, 80)];
+    customView.backgroundColor = [UIColor colorWithWhite:-1 alpha:0.5];
+    
+    UILabel *lbStartingPoint = [[UILabel alloc] init];
+    lbStartingPoint.text = @"Set as start point?";
+    lbStartingPoint.textColor = [UIColor whiteColor];
+    lbStartingPoint.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+    [lbStartingPoint setFrame:CGRectMake(5, 3, 150, 35)];
+    
+    UIButton *btnSet = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnSet setTitle:@"Set" forState:UIControlStateNormal];
+    [btnSet setFrame:CGRectMake(5, 40, 80, 35)];
+    [btnSet addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [btnSet setBackgroundColor:[UIColor orangeColor]];
+    [btnSet setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    UIButton *btnView = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnView setTitle:@"View" forState:UIControlStateNormal];
+    [btnView setFrame:CGRectMake(90, 40, 80, 35)];
+    [btnView addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [btnView setBackgroundColor:[UIColor orangeColor]];
+    [btnView setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    [customView addSubview:lbStartingPoint];
+    [customView addSubview:btnSet];
+    [customView addSubview:btnView];
+
+    return customView;
 }
 
 @end
