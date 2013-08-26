@@ -61,6 +61,7 @@
     [self presentViewController:modalOptionVC animated:YES completion:nil];
     UIBarButtonItem *btnNext = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:nil];
     self.navigationItem.rightBarButtonItem = btnNext;
+    [self.navigationItem.rightBarButtonItem setEnabled:NO];
     
     // Display possible starting points
     [self markStartingPoints];
