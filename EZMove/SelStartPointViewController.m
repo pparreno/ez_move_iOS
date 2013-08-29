@@ -12,6 +12,8 @@
 #import "EZWSForGMSPolylineInfo.h"
 #import "MBProgressHUD.h"
 #import "EZRoute.h"
+#import "AppDelegate.h"
+#import "SelDestinationViewController.h"
 
 @interface SelStartPointViewController ()
 
@@ -21,7 +23,7 @@
 
 @implementation SelStartPointViewController{
   
-    
+    UIBarButtonItem *btnNext;
 }
 
 @synthesize locationManager, currentLocation;
@@ -40,7 +42,7 @@
 {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"New Trip", @"New Trip");
+    self.title = NSLocalizedString(@"Starting Point", @"Starting Point");
     // Initialize map
     self.mapView = [GMSMapView mapWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-45) camera:nil];
     
@@ -59,9 +61,10 @@
     // Initialize layout
     NewUserOptionViewController *modalOptionVC = [[NewUserOptionViewController alloc]init];
     [self presentViewController:modalOptionVC animated:YES completion:nil];
-    UIBarButtonItem *btnNext = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:nil];
+    btnNext = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:nil];
     self.navigationItem.rightBarButtonItem = btnNext;
     [self.navigationItem.rightBarButtonItem setEnabled:NO];
+    [self.navigationItem.rightBarButtonItem setAction:@selector(nextBtnClicked)];
     
     // Display possible starting points
     [self markStartingPoints];
@@ -166,7 +169,27 @@
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    //implement code here for selecting an ActionSheet item
+    switch (buttonIndex) {
+        case 0:
+            // Cancel
+            break;
+        case 1:
+            // Set as Starting Point
+            [self.navigationItem.rightBarButtonItem setEnabled:YES];
+            break;
+        case 2:
+            // View Details
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)nextBtnClicked
+{
+    AppDelegate* appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+    SelDestinationViewController *selDesVC = [[SelDestinationViewController alloc] init];
+    [appDelegate.appNavController pushViewController:selDesVC animated:YES];
 }
 
 @end

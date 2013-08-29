@@ -91,6 +91,8 @@
 		948DA79B17BD0E0100E6BBA0 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */; };
 		94B7373217C645D0007DFD28 /* manual-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B7373017C645D0007DFD28 /* manual-btn.png */; };
 		94B7373317C645D0007DFD28 /* automatic-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B7373117C645D0007DFD28 /* automatic-btn.png */; };
+		94EDCE5E17CF89FF003C4E9C /* SelDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EDCE5C17CF89FF003C4E9C /* SelDestinationViewController.m */; };
+		94EDCE5F17CF89FF003C4E9C /* SelDestinationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94EDCE5D17CF89FF003C4E9C /* SelDestinationViewController.xib */; };
 		94FA690617C3C163009FC970 /* ic_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FA690417C3C163009FC970 /* ic_info.png */; };
 		94FA690717C3C163009FC970 /* ic_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FA690517C3C163009FC970 /* ic_menu.png */; };
 /* End PBXBuildFile section */
@@ -212,6 +214,9 @@
 		948DA79917BD0E0100E6BBA0 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		94B7373017C645D0007DFD28 /* manual-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "manual-btn.png"; sourceTree = "<group>"; };
 		94B7373117C645D0007DFD28 /* automatic-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "automatic-btn.png"; sourceTree = "<group>"; };
+		94EDCE5B17CF89FF003C4E9C /* SelDestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelDestinationViewController.h; sourceTree = "<group>"; };
+		94EDCE5C17CF89FF003C4E9C /* SelDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelDestinationViewController.m; sourceTree = "<group>"; };
+		94EDCE5D17CF89FF003C4E9C /* SelDestinationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelDestinationViewController.xib; sourceTree = "<group>"; };
 		94FA690417C3C163009FC970 /* ic_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info.png; sourceTree = "<group>"; };
 		94FA690517C3C163009FC970 /* ic_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -451,6 +456,9 @@
 				942F12B117C2636F0098BF31 /* NewUserOptionViewController.h */,
 				942F12B217C2636F0098BF31 /* NewUserOptionViewController.m */,
 				942F12B317C2636F0098BF31 /* NewUserOptionViewController.xib */,
+				94EDCE5B17CF89FF003C4E9C /* SelDestinationViewController.h */,
+				94EDCE5C17CF89FF003C4E9C /* SelDestinationViewController.m */,
+				94EDCE5D17CF89FF003C4E9C /* SelDestinationViewController.xib */,
 			);
 			name = "New Trip";
 			sourceTree = "<group>";
@@ -597,6 +605,7 @@
 				94802C8117CA4C6B002668D7 /* btn-route.png in Resources */,
 				94802C8217CA4C6B002668D7 /* btn-saved.png in Resources */,
 				94802C8317CA4C6B002668D7 /* btn-settings.png in Resources */,
+				94EDCE5F17CF89FF003C4E9C /* SelDestinationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,6 +665,7 @@
 				4C48AB1317C88E8800B56207 /* EZLeg.m in Sources */,
 				4C48AB1B17C8A36000B56207 /* EZWebServiceRequest.m in Sources */,
 				4C48AB1E17C8A40200B56207 /* EZWSForGMSPolylineInfo.m in Sources */,
+				94EDCE5E17CF89FF003C4E9C /* SelDestinationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
